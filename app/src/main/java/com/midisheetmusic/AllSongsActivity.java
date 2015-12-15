@@ -12,27 +12,52 @@
 
 package com.midisheetmusic;
 
-import java.io.*;
-import java.util.*;
-import android.net.*;
-import android.app.*;
-import android.os.*;
-import android.widget.*;
+import android.app.ListActivity;
+import android.content.BroadcastReceiver;
+import android.content.ContentResolver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.res.AssetManager;
+import android.database.Cursor;
+import android.net.Uri;
+import android.net.wifi.WifiConfiguration;
+import android.net.wifi.WifiManager;
+import android.net.wifi.p2p.WifiP2pConfig;
+import android.net.wifi.p2p.WifiP2pDevice;
+import android.net.wifi.p2p.WifiP2pManager;
+import android.net.wifi.p2p.WifiP2pManager.ChannelListener;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.os.Environment;
+import android.provider.MediaStore;
+import android.text.Editable;
+import android.text.InputType;
+import android.text.TextWatcher;
 import android.util.Log;
-import android.view.*;
+import android.view.View;
 import android.view.inputmethod.InputMethodManager;
-import android.content.*;
-import android.content.res.*;
-import android.provider.*;
-import android.database.*;
-import android.text.*;
+import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.Toast;
+
+import com.midisheetmusic.wifi_direct.config.Configuration;
+import com.midisheetmusic.wifi_direct.ui.DeviceListFragment.DeviceActionListener;
+import com.midisheetmusic.wifi_direct.wifi.WiFiBroadcastReceiver;
+import com.midisheetmusic.wifi_direct.wifi.WiFiDirectBroadcastReceiver;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
 
 
-/** @class ScanMidiFiles
+/**
+ * @class ScanMidiFiles
  * The ScanMidiFiles class is used to scan for midi files
  * on a background thread.
  */
-class ScanMidiFiles extends AsyncTask<Integer, Integer, ArrayList<FileUri> > {
+class ScanMidiFiles extends AsyncTask<Integer, Integer, ArrayList<FileUri>> {
     private ArrayList<FileUri> songlist;
     private File rootdir;
     private AllSongsActivity activity;
@@ -51,8 +76,8 @@ class ScanMidiFiles extends AsyncTask<Integer, Integer, ArrayList<FileUri> > {
             rootdir = Environment.getExternalStorageDirectory();
             Toast message = Toast.makeText(activity, "Scanning " + rootdir.getAbsolutePath() + " for MIDI files", Toast.LENGTH_SHORT);
             message.show();
+        } catch (Exception e) {
         }
-        catch (Exception e) {}
     }
 
     @Override
@@ -62,8 +87,7 @@ class ScanMidiFiles extends AsyncTask<Integer, Integer, ArrayList<FileUri> > {
         }
         try {
             loadMidiFilesFromDirectory(rootdir, 1);
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
         }
         return songlist;
     }
@@ -85,7 +109,7 @@ class ScanMidiFiles extends AsyncTask<Integer, Integer, ArrayList<FileUri> > {
     protected void onCancelled() {
         this.activity = null;
     }
-    
+
     /* Given a directory, add MIDI files (ending in .mid) to the songlist.
      * If the directory contains subdirectories, call this method recursively.
      */
@@ -99,7 +123,7 @@ class ScanMidiFiles extends AsyncTask<Integer, Integer, ArrayList<FileUri> > {
         File[] files = dir.listFiles();
         if (files == null) {
             return;
-        }        
+        }
         for (File file : files) {
             if (file == null) {
                 continue;
@@ -108,7 +132,7 @@ class ScanMidiFiles extends AsyncTask<Integer, Integer, ArrayList<FileUri> > {
                 return;
             }
             if (file.getName().endsWith(".mid") || file.getName().endsWith(".MID") ||
-                file.getName().endsWith(".midi")) {
+                    file.getName().endsWith(".midi")) {
                 Uri uri = Uri.parse("file://" + file.getAbsolutePath());
                 String displayName = uri.getLastPathSegment();
                 FileUri song = new FileUri(uri, displayName);
@@ -121,36 +145,65 @@ class ScanMidiFiles extends AsyncTask<Integer, Integer, ArrayList<FileUri> > {
             }
             try {
                 if (file.isDirectory()) {
-                    loadMidiFilesFromDirectory(file, depth+1);
+                    loadMidiFilesFromDirectory(file, depth + 1);
                 }
+            } catch (Exception e) {
             }
-            catch (Exception e) {}
         }
     }
 }
 
 
-
-
-/** @class AllSongsActivity
+/**
+ * @class AllSongsActivity
  * The AllSongsActivity class is used to display a list of
  * songs to choose from.  The list is created from the songs
- * shipped with MidiSheetMusic (in the assets directory), and 
- * also by searching for midi files in the internal/external 
+ * shipped with MidiSheetMusic (in the assets directory), and
+ * also by searching for midi files in the internal/external
  * device storage.
- *
+ * <p/>
  * When a song is chosen, this calls the SheetMusicAcitivty, passing
  * the raw midi byte[] data as a parameter in the Intent.
- */ 
-public class AllSongsActivity extends ListActivity implements TextWatcher {
+ */
+public class AllSongsActivity extends ListActivity implements TextWatcher, ChannelListener, DeviceActionListener {
 
-    /** The complete list of midi files */
+    /**
+     * WIFI DIRECT
+     */
+    public static final String TAG = "wifidirectdemo";
+    private WifiP2pManager manager;
+    private boolean isWifiP2pEnabled = false;
+    private boolean retryChannel = false;
+
+    private final IntentFilter intentFilter = new IntentFilter();
+    private final IntentFilter wifiIntentFilter = new IntentFilter();
+    private WifiP2pManager.Channel channel;
+    private BroadcastReceiver receiver = null;
+
+    WifiManager wifiManager;
+    WiFiBroadcastReceiver receiverWifi;
+    private boolean isWifiConnected;
+
+    public boolean isVisible = true;
+
+    public void setIsWifiP2pEnabled(boolean isWifiP2pEnabled) {
+        this.isWifiP2pEnabled = isWifiP2pEnabled;
+    }
+    /** ===========================*/
+
+    /**
+     * The complete list of midi files
+     */
     ArrayList<FileUri> songlist;
 
-    /** Textbox to filter the songs by name */
-    EditText filterText;
+    /**
+     * Textbox to filter the songs by name
+     */
+    public static EditText filterText;
 
-    /** Task to scan for midi files */
+    /**
+     * Task to scan for midi files
+     */
     ScanMidiFiles scanner;
 
     IconArrayAdapter<FileUri> adapter;
@@ -162,8 +215,8 @@ public class AllSongsActivity extends ListActivity implements TextWatcher {
     public Object onRetainNonConfigurationInstance() {
         return songlist;
     }
-    
-    
+
+
     @Override
     public void onCreate(Bundle state) {
         super.onCreate(state);
@@ -178,8 +231,42 @@ public class AllSongsActivity extends ListActivity implements TextWatcher {
             adapter = new IconArrayAdapter<FileUri>(this, android.R.layout.simple_list_item_1, songlist);
             this.setListAdapter(adapter);
         }
+        wifiDirect();
     }
 
+    public void wifiDirect() {
+        intentFilter.addAction(WifiP2pManager.WIFI_P2P_STATE_CHANGED_ACTION);
+        intentFilter.addAction(WifiP2pManager.WIFI_P2P_PEERS_CHANGED_ACTION);
+        intentFilter.addAction(WifiP2pManager.WIFI_P2P_CONNECTION_CHANGED_ACTION);
+        intentFilter.addAction(WifiP2pManager.WIFI_P2P_THIS_DEVICE_CHANGED_ACTION);
+
+        manager = (WifiP2pManager) getSystemService(Context.WIFI_P2P_SERVICE);
+        channel = manager.initialize(this, getMainLooper(), null);
+
+        if (Configuration.isDeviceBridgingEnabled) {
+            wifiManager = (WifiManager) getSystemService(Context.WIFI_SERVICE);
+
+            if (!wifiManager.isWifiEnabled()) {
+                Toast.makeText(getApplicationContext(), "wifi is disabled..making it enabled", Toast.LENGTH_LONG)
+                        .show();
+                wifiManager.setWifiEnabled(true);
+            }
+
+            receiverWifi = new WiFiBroadcastReceiver(wifiManager, this, this.isWifiConnected);
+
+            wifiIntentFilter.addAction(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION);
+            wifiIntentFilter.addAction(WifiManager.NETWORK_STATE_CHANGED_ACTION);
+            wifiIntentFilter.addAction(WifiManager.WIFI_STATE_CHANGED_ACTION);
+
+            registerReceiver(receiverWifi, wifiIntentFilter);
+
+            this.connectToAccessPoint("DIRECT-Sq-Android_ca89", "c5umx0mw");
+        }
+    }
+
+    public static void setEditText(String msg) {
+        filterText.setText(msg);
+    }
 
     @Override
     public void onResume() {
@@ -217,11 +304,25 @@ public class AllSongsActivity extends ListActivity implements TextWatcher {
         filterText.clearFocus();
         InputMethodManager manager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         manager.hideSoftInputFromWindow(filterText.getWindowToken(), 0);
+
+        //WIFIDRICET
+        receiver = new WiFiDirectBroadcastReceiver(this.manager, channel, this);
+        registerReceiver(receiver, intentFilter);
+        this.isVisible = true;
     }
 
 
-    /** Scan the SD card for midi songs.  Since this is a lengthy
-     *  operation, perform the scan in a background thread.
+    @Override
+    public void onPause() {
+        super.onPause();
+        unregisterReceiver(receiver);
+        this.isVisible = false;
+    }
+
+
+    /**
+     * Scan the SD card for midi songs.  Since this is a lengthy
+     * operation, perform the scan in a background thread.
      */
     public void scanForSongs() {
         if (scanner != null) {
@@ -257,35 +358,36 @@ public class AllSongsActivity extends ListActivity implements TextWatcher {
         scanner = null;
     }
 
-    /** Load all the sample midi songs from the assets directory into songlist.
-     *  Look for files ending with ".mid"
+    /**
+     * Load all the sample midi songs from the assets directory into songlist.
+     * Look for files ending with ".mid"
      */
     void loadAssetMidiFiles() {
         try {
             AssetManager assets = this.getResources().getAssets();
             String[] files = assets.list("");
-            for (String path: files) {
+            for (String path : files) {
                 if (path.endsWith(".mid")) {
                     Uri uri = Uri.parse("file:///android_asset/" + path);
                     FileUri file = new FileUri(uri, path);
                     songlist.add(file);
                 }
             }
-        }
-        catch (IOException e) {
+        } catch (IOException e) {
         }
     }
 
-    
-    /** Look for midi files (with mime-type audio/midi) in the 
+
+    /**
+     * Look for midi files (with mime-type audio/midi) in the
      * internal/external storage. Add them to the songlist.
      */
     private void loadMidiFilesFromProvider(Uri content_uri) {
         ContentResolver resolver = getContentResolver();
-        String columns[] = { 
-            MediaStore.Audio.Media._ID,
-            MediaStore.Audio.Media.TITLE, 
-            MediaStore.Audio.Media.MIME_TYPE 
+        String columns[] = {
+                MediaStore.Audio.Media._ID,
+                MediaStore.Audio.Media.TITLE,
+                MediaStore.Audio.Media.MIME_TYPE
         };
         String selection = MediaStore.Audio.Media.MIME_TYPE + " LIKE '%mid%'";
         Cursor cursor = resolver.query(content_uri, columns, selection, null, null);
@@ -296,7 +398,7 @@ public class AllSongsActivity extends ListActivity implements TextWatcher {
             cursor.close();
             return;
         }
-        
+
         do {
             int idColumn = cursor.getColumnIndex(MediaStore.Audio.Media._ID);
             int titleColumn = cursor.getColumnIndex(MediaStore.Audio.Media.TITLE);
@@ -315,10 +417,11 @@ public class AllSongsActivity extends ListActivity implements TextWatcher {
         cursor.close();
     }
 
-    /** When a song is clicked on, start a SheetMusicActivity.
-     *  Read the raw byte[] data of the midi file.
-     *  Pass the raw byte[] data as a parameter in the Intent.
-     *  Pass the midi file Title as a parameter in the Intent.
+    /**
+     * When a song is clicked on, start a SheetMusicActivity.
+     * Read the raw byte[] data of the midi file.
+     * Pass the raw byte[] data as a parameter in the Intent.
+     * Pass the midi file Title as a parameter in the Intent.
      */
     @Override
     protected void onListItemClick(ListView parent, View view, int position, long id) {
@@ -340,8 +443,9 @@ public class AllSongsActivity extends ListActivity implements TextWatcher {
     }
 
 
-    /** As text is entered in the filter box, filter the list of
-     *  midi songs to display.
+    /**
+     * As text is entered in the filter box, filter the list of
+     * midi songs to display.
      */
     @Override
     public void onTextChanged(CharSequence s, int start, int before, int count) {
@@ -352,16 +456,117 @@ public class AllSongsActivity extends ListActivity implements TextWatcher {
     public void afterTextChanged(Editable s) {
     }
 
-   
+
     @Override
     public void beforeTextChanged(CharSequence s, int start, int count, int after) {
     }
 
-    /** Start the FileBrowser activity, which is used to select a midi file */
+    /**
+     * Start the FileBrowser activity, which is used to select a midi file
+     */
     void browseForSongs() {
         Intent intent = new Intent(this, FileBrowserActivity.class);
         startActivity(intent);
     }
+
+    /**
+     * WIFI DIRECT
+     */
+
+    @Override
+    public void showDetails(WifiP2pDevice device) {
+    }
+
+    @Override
+    public void connect(WifiP2pConfig config) {
+        manager.connect(channel, config, new WifiP2pManager.ActionListener() {
+
+            @Override
+            public void onSuccess() {
+                // WiFiDirectBroadcastReceiver will notify us. Ignore for now.
+            }
+
+            @Override
+            public void onFailure(int reason) {
+                Toast.makeText(AllSongsActivity.this, "Connect failed. Retry.", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    @Override
+    public void disconnect() {
+        manager.removeGroup(channel, new WifiP2pManager.ActionListener() {
+
+            @Override
+            public void onFailure(int reasonCode) {
+                Log.d(TAG, "Disconnect failed. Reason :" + reasonCode);
+
+            }
+
+            @Override
+            public void onSuccess() {
+//                fragment.getView().setVisibility(View.GONE);
+            }
+
+        });
+    }
+
+    @Override
+    public void onChannelDisconnected() {
+        // we will try once more
+        if (manager != null && !retryChannel) {
+            Toast.makeText(this, "Channel lost. Trying again", Toast.LENGTH_LONG).show();
+            retryChannel = true;
+            manager.initialize(this, getMainLooper(), this);
+        } else {
+            Toast.makeText(this, "Severe! Channel is probably lost premanently. Try Disable/Re-Enable P2P.",
+                    Toast.LENGTH_LONG).show();
+        }
+    }
+
+    @Override
+    public void cancelDisconnect() {
+
+    }
+
+    public void connectToAccessPoint(String ssid, String passphrase) {
+
+        Log.d(AllSongsActivity.TAG, "Trying to connect to AP : (" + ssid + "," + passphrase + ")");
+
+        WifiConfiguration wc = new WifiConfiguration();
+        wc.SSID = "\"" + ssid + "\"";
+        wc.preSharedKey = "\"" + passphrase + "\""; // "\""+passphrase+"\"";
+        wc.status = WifiConfiguration.Status.ENABLED;
+        wc.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.TKIP);
+        wc.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.CCMP);
+        wc.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.WPA_PSK);
+        wc.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.TKIP);
+        wc.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.CCMP);
+        wc.allowedProtocols.set(WifiConfiguration.Protocol.RSN);
+        // connect to and enable the connection
+        int netId = wifiManager.addNetwork(wc);
+        wifiManager.enableNetwork(netId, true);
+        wifiManager.setWifiEnabled(true);
+
+        Log.d(AllSongsActivity.TAG, "Connected? ip = " + wifiManager.getConnectionInfo().getIpAddress());
+        Log.d(AllSongsActivity.TAG, "Connected? bssid = " + wifiManager.getConnectionInfo().getBSSID());
+        Log.d(AllSongsActivity.TAG, "Connected? ssid = " + wifiManager.getConnectionInfo().getSSID());
+
+        if (wifiManager.getConnectionInfo().getIpAddress() != 0) {
+            this.isWifiConnected = true;
+            Toast.makeText(this, "Connected!!! ip = " + wifiManager.getConnectionInfo().getIpAddress(),
+                    Toast.LENGTH_LONG).show();
+        } else {
+            Toast.makeText(
+                    this,
+                    "WiFi AP connection failed... ip = " + wifiManager.getConnectionInfo().getIpAddress() + "(" + ssid
+                            + "," + passphrase + ")", Toast.LENGTH_LONG).show();
+        }
+    }
+
+    public void resetData() {
+    }
+    /** ==== */
 
 }
 

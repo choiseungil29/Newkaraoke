@@ -46,30 +46,53 @@ public final class R {
         public static final int two=0x7f020016;
     }
     public static final class id {
-        public static final int browse_files=0x7f07000a;
-        public static final int choose_song=0x7f07000b;
-        public static final int choose_song_icon=0x7f070001;
-        public static final int choose_song_name=0x7f070002;
-        public static final int color_preference_widget=0x7f070003;
-        public static final int directory=0x7f070004;
-        public static final int help=0x7f07000e;
-        public static final int help_webview=0x7f070005;
-        public static final int iv_background=0x7f070006;
+        public static final int browse_files=0x7f07001d;
+        public static final int btn_connect=0x7f070005;
+        public static final int btn_disconnect=0x7f070006;
+        public static final int btn_start_client=0x7f070007;
+        public static final int choose_song=0x7f07001e;
+        public static final int choose_song_icon=0x7f070002;
+        public static final int choose_song_name=0x7f070003;
+        public static final int color_preference_widget=0x7f070004;
+        public static final int device_address=0x7f07000a;
+        public static final int device_details=0x7f070017;
+        public static final int device_info=0x7f07000b;
+        public static final int device_name=0x7f070016;
+        public static final int directory=0x7f070013;
+        public static final int edit_send_data=0x7f070008;
+        public static final int frag_detail=0x7f070001;
+        public static final int group_ip=0x7f07000d;
+        public static final int group_owner=0x7f07000c;
+        public static final int help=0x7f070021;
+        public static final int help_webview=0x7f070014;
+        public static final int icon=0x7f070010;
+        public static final int iv_background=0x7f070015;
+        public static final int my_name=0x7f070011;
+        public static final int my_status=0x7f070012;
         public static final int name_filter=0x7f070000;
-        public static final int save_images=0x7f07000d;
-        public static final int save_images_descr=0x7f070007;
-        public static final int save_images_filename=0x7f070008;
-        public static final int scan_files=0x7f070009;
-        public static final int song_settings=0x7f07000c;
+        public static final int peer_MAC=0x7f070019;
+        public static final int peer_name=0x7f070018;
+        public static final int save_images=0x7f070020;
+        public static final int save_images_descr=0x7f07001a;
+        public static final int save_images_filename=0x7f07001b;
+        public static final int scan_files=0x7f07001c;
+        public static final int song_settings=0x7f07001f;
+        public static final int status_bar=0x7f07000e;
+        public static final int status_text=0x7f07000f;
+        public static final int text_content=0x7f070009;
     }
     public static final class layout {
         public static final int choose_song=0x7f030000;
         public static final int choose_song_item=0x7f030001;
         public static final int color_preference=0x7f030002;
-        public static final int file_browser=0x7f030003;
-        public static final int help=0x7f030004;
-        public static final int main=0x7f030005;
-        public static final int save_images_dialog=0x7f030006;
+        public static final int device_detail=0x7f030003;
+        public static final int device_list=0x7f030004;
+        public static final int file_browser=0x7f030005;
+        public static final int help=0x7f030006;
+        public static final int main=0x7f030007;
+        public static final int row_devices=0x7f030008;
+        public static final int row_peers=0x7f030009;
+        public static final int save_images_dialog=0x7f03000a;
     }
     public static final class menu {
         public static final int choose_song_menu=0x7f060000;
