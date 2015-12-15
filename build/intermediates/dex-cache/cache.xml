@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/clogic/Workspace/MidiSheetMusic/app/build/intermediates/incremental-classes/debug/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="b8b3bfadeac494d069934c5ec0e455f35b2cedc1">
+        <dex dex="/Users/clogic/Workspace/MidiSheetMusic/app/build/intermediates/pre-dexed/debug/classes_8b01ad9ac8b55b011f30c4c54813bc528e65ee16.jar" />
+    </item>
+
+</items>

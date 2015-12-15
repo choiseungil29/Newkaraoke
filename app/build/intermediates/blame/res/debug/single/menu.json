@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/clogic/Workspace/MidiSheetMusic/app/build/intermediates/res/merged/debug/menu/choose_song_menu.xml",
+        "source": "/Users/clogic/Workspace/MidiSheetMusic/app/src/main/res/menu/choose_song_menu.xml"
+    },
+    {
+        "merged": "/Users/clogic/Workspace/MidiSheetMusic/app/build/intermediates/res/merged/debug/menu/sheet_menu.xml",
+        "source": "/Users/clogic/Workspace/MidiSheetMusic/app/src/main/res/menu/sheet_menu.xml"
+    }
+]
