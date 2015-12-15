@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/background_menu"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/btn_menu"
+            android:layout_width="57dp"
+            android:layout_height="57dp"
+            android:src="@drawable/btn_menu" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/btn_arrow_top_left"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/btn_arrow_top_left" />
+
+        <ImageView
+            android:id="@+id/btn_arrow_top"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/btn_arrow_top" />
+
+        <ImageView
+            android:id="@+id/btn_arrow_top_right"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/btn_arrow_top_right" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/btn_arrow_left"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/btn_arrow_left" />
+
+        <ImageView
+            android:id="@+id/btn_arrow_center"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/btn_arrow_center" />
+
+        <ImageView
+            android:id="@+id/btn_arrow_right"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/btn_arrow_right" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/btn_arrow_bottom_left"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_margin="5dp"
+            android:src="@android:drawable/ic_lock_lock" />
+
+        <ImageView
+            android:id="@+id/btn_arrow_bottom"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/btn_arrow_bottom" />
+
+        <ImageView
+            android:id="@+id/btn_arrow_bottom_right"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/btn_arrow_bottom_right" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/btn_singing_room"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/btn_singing_room" />
+
+        <ImageView
+            android:id="@+id/btn_music_room"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/btn_music_room" />
+    </LinearLayout>
+
+</LinearLayout>
