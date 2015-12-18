@@ -42,6 +42,9 @@ public class FileUri implements Comparator<FileUri> {
     /** Given a path name, return a display name */
     public static String displayNameFromPath(String path) {
         String displayName = path;
+        if(displayName.startsWith("J") || displayName.startsWith("A")) {
+            displayName = displayName.substring(1);
+        }
         displayName = displayName.replace("__", ": ");
         displayName = displayName.replace("_", " ");
         displayName = displayName.replace(".mid", "");
