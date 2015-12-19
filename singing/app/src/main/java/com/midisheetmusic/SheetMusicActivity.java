@@ -127,6 +127,7 @@ public class SheetMusicActivity extends Activity implements SurfaceHolder.Callba
         createView();
         createSheetMusic(options);
         player.Play();
+        /** 시작하는 주석 */
     }
 
     void initRecodeView() {

@@ -1,11 +1,2 @@
-/Users/clogic/Workspace/MidiSheetMusic/app/build/intermediates/transforms/instantRun/debug/folders/1/1/main/com/midisheetmusic/SettingsActivity.class
-/Users/clogic/Workspace/MidiSheetMusic/app/build/intermediates/transforms/instantRun/debug/folders/1/1/main/com/midisheetmusic/MidiPlayer$9.class
-/Users/clogic/Workspace/MidiSheetMusic/app/build/intermediates/transforms/instantRun/debug/folders/1/1/main/com/midisheetmusic/MidiPlayer$6.class
-/Users/clogic/Workspace/MidiSheetMusic/app/build/intermediates/transforms/instantRun/debug/folders/1/1/main/com/midisheetmusic/MidiPlayer.class
-/Users/clogic/Workspace/MidiSheetMusic/app/build/intermediates/transforms/instantRun/debug/folders/1/1/main/com/midisheetmusic/MidiPlayer$7.class
-/Users/clogic/Workspace/MidiSheetMusic/app/build/intermediates/transforms/instantRun/debug/folders/1/1/main/com/midisheetmusic/MidiPlayer$8.class
-/Users/clogic/Workspace/MidiSheetMusic/app/build/intermediates/transforms/instantRun/debug/folders/1/1/main/com/midisheetmusic/SheetMusicActivity.class
-/Users/clogic/Workspace/MidiSheetMusic/app/build/intermediates/transforms/instantRun/debug/folders/1/1/main/com/midisheetmusic/MidiFile.class
-/Users/clogic/Workspace/MidiSheetMusic/app/build/intermediates/transforms/instantRun/debug/folders/1/1/main/com/midisheetmusic/AllSongsActivity.class
-/Users/clogic/Workspace/MidiSheetMusic/app/build/intermediates/transforms/instantRun/debug/folders/1/1/main/com/midisheetmusic/MidiSheetMusicActivity$1.class
-/Users/clogic/Workspace/MidiSheetMusic/app/build/intermediates/transforms/instantRun/debug/folders/1/1/main/com/midisheetmusic/MidiSheetMusicActivity.class
+/Users/clogic/Workspace/MidiSheetMusic/singing/app/build/intermediates/transforms/instantRun/debug/folders/1/1/main/com/midisheetmusic/IconArrayAdapter.class
+/Users/clogic/Workspace/MidiSheetMusic/singing/app/build/intermediates/transforms/instantRun/debug/folders/1/1/main/com/midisheetmusic/FileUri.class

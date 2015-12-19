@@ -2,9 +2,10 @@
 <items version="2" >
 
     <item
-        jar="/Users/1002230/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/7.0.1/d5d13ea991eab0252e3710e5df3d6a9d4b21d461/butterknife-7.0.1.jar"
+        jar="/Users/clogic/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar"
         jumboMode="false"
         revision="23.0.2"
+<<<<<<< HEAD
         sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
         <dex dex="/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/clicker/app/build/intermediates/pre-dexed/debug/butterknife-7.0.1-15ff8f3fe1ccfeefec358548a67541dd26a2f4ac.jar" />
     </item>
@@ -35,6 +36,38 @@
         revision="23.0.2"
         sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
         <dex dex="/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/clicker/app/build/intermediates/pre-dexed/debug/classes-8eab5059946d7b5e23633f5b27ab215d39843174.jar" />
+=======
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="/Users/clogic/Workspace/MidiSheetMusic/clicker/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.1-4bfc45498e38b8e45ae763fe4c3ec38e41a0721d.jar" />
+    </item>
+    <item
+        jar="/Users/clogic/Workspace/MidiSheetMusic/clicker/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="/Users/clogic/Workspace/MidiSheetMusic/clicker/app/build/intermediates/pre-dexed/debug/classes-d1343653f6cb1e24805f2baa86373081ba34ce3b.jar" />
+    </item>
+    <item
+        jar="/Users/clogic/Workspace/MidiSheetMusic/clicker/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="/Users/clogic/Workspace/MidiSheetMusic/clicker/app/build/intermediates/pre-dexed/debug/classes-70b524724e5063d5252100b7160f1f793540821e.jar" />
+    </item>
+    <item
+        jar="/Users/clogic/Workspace/MidiSheetMusic/clicker/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/libs/internal_impl-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="/Users/clogic/Workspace/MidiSheetMusic/clicker/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.1-03880e1e490496226eeb024f934276fba993c067.jar" />
+    </item>
+    <item
+        jar="/Users/clogic/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/7.0.1/d5d13ea991eab0252e3710e5df3d6a9d4b21d461/butterknife-7.0.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
+        <dex dex="/Users/clogic/Workspace/MidiSheetMusic/clicker/app/build/intermediates/pre-dexed/debug/butterknife-7.0.1-4b5f5e72565cb8dfee3870e4e55bb6460204e4be.jar" />
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
     </item>
 
 </items>

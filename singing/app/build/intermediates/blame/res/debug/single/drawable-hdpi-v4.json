@@ -10,5 +10,9 @@
     {
         "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/icon.png",
         "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/src/main/res/drawable-hdpi/icon.png"
+    },
+    {
+        "merged": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/icon.png",
+        "source": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/drawable-hdpi/icon.png"
     }
 ]

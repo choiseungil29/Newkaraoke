@@ -470,6 +470,9 @@ public class MidiPlayer extends LinearLayout {
         timer.postDelayed(DoPlay, 1000);
     }
 
+    /**
+     * 여기서 노래 재생 시작.
+     */
     Runnable DoPlay = new Runnable() {
       public void run() {
         activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
@@ -691,6 +694,9 @@ public class MidiPlayer extends LinearLayout {
             }
 
             /* Stop if we've reached the end of the song */
+            /**
+             * 여기서 끝남. 시간 다됐대
+             */
             if (currentPulseTime > midifile.getTotalPulses()) {
                 DoStop();
                 return;
