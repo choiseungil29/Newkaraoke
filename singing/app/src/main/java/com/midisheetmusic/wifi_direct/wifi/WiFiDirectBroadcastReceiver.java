@@ -19,7 +19,6 @@ import com.midisheetmusic.wifi_direct.router.MeshNetworkManager;
 import com.midisheetmusic.wifi_direct.router.Receiver;
 import com.midisheetmusic.wifi_direct.router.Sender;
 import com.midisheetmusic.wifi_direct.ui.DeviceDetailFragment;
-import com.midisheetmusic.wifi_direct.ui.DeviceListFragment;
 
 
 /**

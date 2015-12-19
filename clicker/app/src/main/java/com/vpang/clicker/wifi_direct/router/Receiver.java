@@ -51,7 +51,7 @@ public class Receiver implements Runnable {
      */
     public void run() {
         /*
-		 * A queue for received packets
+         * A queue for received packets
 		 */
         ConcurrentLinkedQueue<Packet> packetQueue = new ConcurrentLinkedQueue<Packet>();
 
@@ -130,11 +130,11 @@ public class Receiver implements Runnable {
 
                             @Override
                             public void run() {
-                                if (activity.isVisible) {
-                                    Toast.makeText(activity, message, Toast.LENGTH_LONG).show();
-                                } else {
-                                    MessageActivity.addMessage(name, message);
-                                }
+//                                if (activity.isVisible) {
+                                Toast.makeText(activity, message, Toast.LENGTH_LONG).show();
+//                                } else {
+//                                    MessageActivity.addMessage(name, message);
+//                                }
                             }
                         });
                         updatePeerList();
@@ -160,13 +160,13 @@ public class Receiver implements Runnable {
 
                             @Override
                             public void run() {
-                                Log.d("kkk","activit.invisibie : "+activity.isVisible);
-                                if (activity.isVisible) {
-                                    Toast.makeText(activity, message, Toast.LENGTH_LONG).show();
-                                } else {
-                                    MessageActivity.addMessage(name, msg);
-                                }
-                                DeviceDetailFragment.setDataTextView(msg);
+                                Log.d("kkk", "activit.invisibie : " + activity.isVisible);
+//                                if (activity.isVisible) {
+                                Toast.makeText(activity, message, Toast.LENGTH_LONG).show();
+//                                } else {
+//                                    MessageActivity.addMessage(name, msg);
+//                                }
+//                                DeviceDetailFragment.setDataTextView(msg);
                             }
                         });
                         updatePeerList();
@@ -198,11 +198,11 @@ public class Receiver implements Runnable {
         message = msg = smac + " has joined.";
         final String name = smac;
         activity.runOnUiThread(new Runnable() {
-//
+            //
             @Override
             public void run() {
 //                if (activity.isVisible) {
-                    Toast.makeText(activity, message, Toast.LENGTH_LONG).show();
+                Toast.makeText(activity, message, Toast.LENGTH_LONG).show();
 //                } else {
 //                    MessageActivity.addMessage(name, msg);
 //                }
@@ -225,11 +225,11 @@ public class Receiver implements Runnable {
 
             @Override
             public void run() {
-                if (activity.isVisible) {
-                    Toast.makeText(activity, message, Toast.LENGTH_LONG).show();
-                } else {
-                    MessageActivity.addMessage(name, msg);
-                }
+//                if (activity.isVisible) {
+                Toast.makeText(activity, message, Toast.LENGTH_LONG).show();
+//                } else {
+//                    MessageActivity.addMessage(name, msg);
+//                }
             }
         });
     }
@@ -243,7 +243,8 @@ public class Receiver implements Runnable {
         activity.runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                DeviceDetailFragment.updateGroupChatMembersMessage();
+                DataSendActivity.updateGroupChatMembersMessage();
+//                DeviceDetailFragment.updateGroupChatMembersMessage();
             }
 
         });

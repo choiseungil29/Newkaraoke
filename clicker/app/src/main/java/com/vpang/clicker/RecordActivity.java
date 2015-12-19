@@ -1,139 +1,156 @@
 package com.vpang.clicker;
 
 import android.app.Activity;
-import android.content.Context;
-import android.content.Intent;
-import android.hardware.Camera;
+import android.graphics.Color;
+import android.media.MediaRecorder;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
-import android.view.Window;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.vpang.clicker.recode.DirUtils;
-import com.vpang.clicker.recode.MyRecorder;
-import com.vpang.clicker.recode.SettingsDialog;
+import java.io.File;
+import java.util.Calendar;
+import java.util.Locale;
 
-import java.io.IOException;
+public class RecordActivity extends Activity implements SurfaceHolder.Callback, View.OnClickListener {
 
-public class RecordActivity extends Activity implements SurfaceHolder.Callback {
+    private SurfaceView surfaceView;
+    private boolean is_holder_created;
 
-    private SurfaceView prSurfaceView;
-    private Button prStartBtn;
-    private Button prSettingsBtn;
-    private boolean prRecordInProcess;
-    private SurfaceHolder prSurfaceHolder;
-    private Camera prCamera;
-    private final String cVideoFilePath = Environment.getExternalStorageDirectory().getPath() + "/vpang/";
-    private MyRecorder myrecorder;
+    Button button;
 
-    private Context prContext;
+    private SurfaceHolder holder;
+    private MediaRecorder recorder;
+    boolean is_recording;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        prContext = this.getApplicationContext();
-        setContentView(R.layout.activity_record);
-        DirUtils.createDirIfNotExist(cVideoFilePath);
-        prSurfaceView = (SurfaceView) findViewById(R.id.surface_camera);
-        prStartBtn = (Button) findViewById(R.id.main_btn1);
-        prSettingsBtn = (Button) findViewById(R.id.main_btn2);
-        prRecordInProcess = false;
 
-        prStartBtn.setOnClickListener(new View.OnClickListener() {
-            // @Override
-            public void onClick(View v) {
-                myrecorder = new MyRecorder(prRecordInProcess, prCamera, prContext, cVideoFilePath, prSurfaceHolder);
-                if (prRecordInProcess == false) {
-                    myrecorder.startRecording();
-                    prStartBtn.setText("stop");
-                    prRecordInProcess = true;
-                } else {
-                    myrecorder.stopRecording();
-                    prStartBtn.setText("start");
-                    prRecordInProcess = false;
-                }
-            }
-        });
-        prSettingsBtn.setOnClickListener(new View.OnClickListener() {
-            // @Override
-            public void onClick(View v) {
-                Intent lIntent = new Intent();
-                lIntent.setClass(prContext, SettingsDialog.class);
-                startActivityForResult(lIntent, REQUEST_DECODING_OPTIONS);
-            }
-        });
-        prSurfaceHolder = prSurfaceView.getHolder();
-        prSurfaceHolder.addCallback(this);
-        prSurfaceHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
-    }
 
-    @Override
-    public void surfaceCreated(SurfaceHolder holder) {
-        // TODO Auto-generated method stub
-        prCamera = Camera.open();
-        if (prCamera == null) {
-            Toast.makeText(this.getApplicationContext(), "����ͷ������!",
-                    Toast.LENGTH_SHORT).show();
-            finish();
-        }
+        LinearLayout rl = new LinearLayout(this);
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams
+                (ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+        LinearLayout.LayoutParams params1 = new LinearLayout.LayoutParams(1, 1);
+        LinearLayout.LayoutParams params2 = new LinearLayout.LayoutParams
+                (ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        rl.setLayoutParams(params);
+
+
+        rl.setOrientation(LinearLayout.VERTICAL);
+        button = new Button(this);
+        button.setLayoutParams(params2);
+        surfaceView = new SurfaceView(this);
+        surfaceView.setLayoutParams(params1);
+        surfaceView.setBackgroundColor(Color.BLACK);
+        rl.addView(button);
+        rl.addView(surfaceView);
+
+        setContentView(rl);
+
+        is_holder_created = false;
+        is_recording = false;
+
+        holder = surfaceView.getHolder();
+        holder.addCallback(this);
+        button.setOnClickListener(this);
 
     }
 
     @Override
-    public void surfaceChanged(SurfaceHolder holder, int format, int width,
-                               int height) {
-        // TODO Auto-generated method stub
-        Camera.Parameters lParam = prCamera.getParameters();
-        // //lParam.setPreviewSize(_width, _height);
-        // //lParam.setPreviewSize(320, 240);
-        // lParam.setPreviewFormat(PixelFormat.JPEG);
-        prCamera.setParameters(lParam);
-        try {
-            prCamera.setPreviewDisplay(holder);
-            prCamera.startPreview();
-            // prPreviewRunning = true;
-        } catch (IOException _le) {
-            _le.printStackTrace();
+    public void onClick(View v) {
+        if (!is_recording) {
+            startRecord();
+            is_recording = true;
+            button.setText("녹화중지");
+        } else {
+            stopRecord();
+            is_recording = false;
+            button.setText("녹화시작");
         }
     }
 
     @Override
-    public void surfaceDestroyed(SurfaceHolder holder) {
-        // TODO Auto-generated method stub
-        try {
-            if (prRecordInProcess) {
-                myrecorder.stopRecording();
-                prStartBtn.setText("start");
-                prRecordInProcess = false;
-            } else {
-                prCamera.stopPreview();
+    public void onDestroy() {
+        super.onDestroy();
+        stopRecord();
+    }
+
+    @Override
+    public void surfaceChanged(SurfaceHolder arg0, int arg1, int arg2, int arg3) {
+    }
+
+    @Override
+    public void surfaceCreated(SurfaceHolder arg0) {
+        is_holder_created = true;
+        Toast.makeText(this, "이제 녹화를 시작할 수 있습니다.",
+                Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void surfaceDestroyed(SurfaceHolder arg0) {
+        is_holder_created = false;
+    }
+
+    public void stopRecord() {
+        if (recorder != null) {
+            try {
+                recorder.stop();
+                recorder.release();
+            } catch (Exception e) {
             }
-            myrecorder.prMediaRecorder.release();
-            myrecorder.prMediaRecorder = null;
-            prCamera.release();
-            prCamera = null;
-        }catch (Exception e){
+            recorder = null;
+        }
+    }
+
+    public void startRecord() {
+        try {
+            recorder = new MediaRecorder();
+            recorder.setVideoSource(MediaRecorder.VideoSource.CAMERA);
+            // 녹음될 사운드의 출처
+            recorder.setAudioSource(MediaRecorder.AudioSource.MIC);
+            // 사운드의 저장 형식
+            recorder.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4);
+            recorder.setVideoEncoder(MediaRecorder.VideoEncoder.H264);
+            // 사운드 코덱 지정
+            recorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
+
+            File dir = new File(Environment.getExternalStorageDirectory().getPath() + "/vpang/");
+            if (!dir.exists()) {
+                dir.mkdirs();
+            }
+            File file = File.createTempFile(getNewFileName(), ".mp4", dir);
+
+            recorder.setOutputFile(file.getAbsolutePath());
+
+            /** 미리보기 연결 */
+            recorder.setPreviewDisplay(holder.getSurface());
+
+            // 녹음의 시작
+            recorder.prepare();
+            recorder.start();
+        } catch (Exception e) {
             e.printStackTrace();
+            Toast.makeText(this, "영상 녹화에 실패했습니다.",
+                    Toast.LENGTH_SHORT).show();
         }
     }
 
-    private static final int REQUEST_DECODING_OPTIONS = 0;
+    public String getNewFileName() {
+        Calendar c = Calendar.getInstance();
+        int yy = c.get(Calendar.YEAR);
+        int mm = c.get(Calendar.MONTH);
+        int dd = c.get(Calendar.DAY_OF_MONTH);
+        int hh = c.get(Calendar.HOUR_OF_DAY);
+        int mi = c.get(Calendar.MINUTE);
+        int ss = c.get(Calendar.SECOND);
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode,
-                                    Intent intent) {
-        super.onActivityResult(requestCode, resultCode, intent);
-        switch (requestCode) {
-            case REQUEST_DECODING_OPTIONS:
-                if (resultCode == RESULT_OK) {
-                    myrecorder.updateEncodingOptions();
-                }
-                break;
-        }
+        return String.format(Locale.getDefault(), "%04d-%02d-%02d %02d;%02d;%02d", yy, mm, dd, hh, mi, ss);
+
     }
 }

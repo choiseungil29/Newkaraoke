@@ -1,9 +1,12 @@
 [
     {
+<<<<<<< HEAD
+=======
         "merged": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/build/intermediates/res/merged/debug/drawable/recentfilesicon.png",
         "source": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/drawable/recentfilesicon.png"
     },
     {
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
         "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/build/intermediates/res/merged/debug/drawable/stop.png",
         "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/src/main/res/drawable/stop.png"
     },
@@ -12,6 +15,13 @@
         "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/src/main/res/drawable/six.png"
     },
     {
+<<<<<<< HEAD
+        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/build/intermediates/res/merged/debug/drawable/main_background.png",
+        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/drawable/main_background.png"
+    },
+    {
+=======
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
         "merged": "/Users/clogic/Workspace/MidiSheetMusic/app/build/intermediates/res/merged/debug/drawable/two.png",
         "source": "/Users/clogic/Workspace/MidiSheetMusic/app/src/main/res/drawable/two.png"
     },
@@ -24,6 +34,26 @@
         "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/src/main/res/drawable/settings.png"
     },
     {
+<<<<<<< HEAD
+        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/build/intermediates/res/merged/debug/drawable/stop.png",
+        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/drawable/stop.png"
+    },
+    {
+        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/build/intermediates/res/merged/debug/drawable/nine.png",
+        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/drawable/nine.png"
+    },
+    {
+        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/build/intermediates/res/merged/debug/drawable/fastforward.png",
+        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/src/main/res/drawable/fastforward.png"
+    },
+    {
+        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/build/intermediates/res/merged/debug/drawable/twelve.png",
+        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/drawable/twelve.png"
+    },
+    {
+        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/build/intermediates/res/merged/debug/drawable/notepair.png",
+        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/drawable/notepair.png"
+=======
         "merged": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/build/intermediates/res/merged/debug/drawable/nine.png",
         "source": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/drawable/nine.png"
     },
@@ -38,14 +68,20 @@
     {
         "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/build/intermediates/res/merged/debug/drawable/fastforward.png",
         "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/src/main/res/drawable/fastforward.png"
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
     },
     {
         "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/build/intermediates/res/merged/debug/drawable/browsefilesicon.png",
         "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/src/main/res/drawable/browsefilesicon.png"
     },
     {
+<<<<<<< HEAD
+        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/build/intermediates/res/merged/debug/drawable/play.png",
+        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/drawable/play.png"
+=======
         "merged": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/build/intermediates/res/merged/debug/drawable/two.png",
         "source": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/drawable/two.png"
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
     },
     {
         "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/build/intermediates/res/merged/debug/drawable/menu_refresh.png",
@@ -68,12 +104,19 @@
         "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/src/main/res/drawable/notepair.png"
     },
     {
+<<<<<<< HEAD
+=======
         "merged": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/build/intermediates/res/merged/debug/drawable/main_background.png",
         "source": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/drawable/main_background.png"
     },
     {
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
         "merged": "/Users/clogic/Workspace/MidiSheetMusic/app/build/intermediates/res/merged/debug/drawable/menu_refresh.png",
         "source": "/Users/clogic/Workspace/MidiSheetMusic/app/src/main/res/drawable/menu_refresh.png"
+    },
+    {
+        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/build/intermediates/res/merged/debug/drawable/menu_refresh.png",
+        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/drawable/menu_refresh.png"
     },
     {
         "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/build/intermediates/res/merged/debug/drawable/allfilesicon.png",
@@ -84,18 +127,27 @@
         "source": "/Users/clogic/Workspace/MidiSheetMusic/app/src/main/res/drawable/allfilesicon.png"
     },
     {
+<<<<<<< HEAD
+        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/build/intermediates/res/merged/debug/drawable/play.png",
+        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/src/main/res/drawable/play.png"
+=======
         "merged": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/build/intermediates/res/merged/debug/drawable/allfilesicon.png",
         "source": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/drawable/allfilesicon.png"
     },
     {
         "merged": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/build/intermediates/res/merged/debug/drawable/twelve.png",
         "source": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/drawable/twelve.png"
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
     },
     {
         "merged": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/build/intermediates/res/merged/debug/drawable/browsefilesicon.png",
         "source": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/drawable/browsefilesicon.png"
     },
     {
+<<<<<<< HEAD
+        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/build/intermediates/res/merged/debug/drawable/recentfilesicon.png",
+        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/drawable/recentfilesicon.png"
+=======
         "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/build/intermediates/res/merged/debug/drawable/play.png",
         "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/src/main/res/drawable/play.png"
     },
@@ -106,6 +158,7 @@
     {
         "merged": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/build/intermediates/res/merged/debug/drawable/play.png",
         "source": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/drawable/play.png"
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
     },
     {
         "merged": "/Users/clogic/Workspace/MidiSheetMusic/app/build/intermediates/res/merged/debug/drawable/recentfilesicon.png",
@@ -120,24 +173,153 @@
         "source": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/drawable/fastforward.png"
     },
     {
+<<<<<<< HEAD
+        "merged": "/Users/clogic/Workspace/MidiSheetMusic/app/build/intermediates/res/merged/debug/drawable/notepair.png",
+        "source": "/Users/clogic/Workspace/MidiSheetMusic/app/src/main/res/drawable/notepair.png"
+    },
+    {
+        "merged": "/Users/clogic/Workspace/MidiSheetMusic/app/build/intermediates/res/merged/debug/drawable/bass.png",
+        "source": "/Users/clogic/Workspace/MidiSheetMusic/app/src/main/res/drawable/bass.png"
+    },
+    {
+        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/build/intermediates/res/merged/debug/drawable/pause.png",
+        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/src/main/res/drawable/pause.png"
+    },
+    {
+        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/build/intermediates/res/merged/debug/drawable/bass.png",
+        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/drawable/bass.png"
+    },
+    {
+        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/build/intermediates/res/merged/debug/drawable/eight.png",
+        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/drawable/eight.png"
+    },
+    {
+        "merged": "/Users/clogic/Workspace/MidiSheetMusic/app/build/intermediates/res/merged/debug/drawable/four.png",
+        "source": "/Users/clogic/Workspace/MidiSheetMusic/app/src/main/res/drawable/four.png"
+    },
+    {
+        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/build/intermediates/res/merged/debug/drawable/two.png",
+        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/src/main/res/drawable/two.png"
+    },
+    {
+        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/build/intermediates/res/merged/debug/drawable/bass.png",
+        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/src/main/res/drawable/bass.png"
+    },
+    {
+        "merged": "/Users/clogic/Workspace/MidiSheetMusic/app/build/intermediates/res/merged/debug/drawable/eight.png",
+        "source": "/Users/clogic/Workspace/MidiSheetMusic/app/src/main/res/drawable/eight.png"
+    },
+    {
+        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/build/intermediates/res/merged/debug/drawable/browsefilesicon.png",
+        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/drawable/browsefilesicon.png"
+    },
+    {
+        "merged": "/Users/clogic/Workspace/MidiSheetMusic/app/build/intermediates/res/merged/debug/drawable/rewind.png",
+        "source": "/Users/clogic/Workspace/MidiSheetMusic/app/src/main/res/drawable/rewind.png"
+    },
+    {
+        "merged": "/Users/clogic/Workspace/MidiSheetMusic/app/build/intermediates/res/merged/debug/drawable/icon.png",
+        "source": "/Users/clogic/Workspace/MidiSheetMusic/app/src/main/res/drawable/icon.png"
+    },
+    {
+        "merged": "/Users/clogic/Workspace/MidiSheetMusic/app/build/intermediates/res/merged/debug/drawable/treble.png",
+        "source": "/Users/clogic/Workspace/MidiSheetMusic/app/src/main/res/drawable/treble.png"
+    },
+    {
+        "merged": "/Users/clogic/Workspace/MidiSheetMusic/app/build/intermediates/res/merged/debug/drawable/six.png",
+        "source": "/Users/clogic/Workspace/MidiSheetMusic/app/src/main/res/drawable/six.png"
+    },
+    {
+        "merged": "/Users/clogic/Workspace/MidiSheetMusic/app/build/intermediates/res/merged/debug/drawable/settings.png",
+        "source": "/Users/clogic/Workspace/MidiSheetMusic/app/src/main/res/drawable/settings.png"
+    },
+    {
+        "merged": "/Users/clogic/Workspace/MidiSheetMusic/app/build/intermediates/res/merged/debug/drawable/nine.png",
+        "source": "/Users/clogic/Workspace/MidiSheetMusic/app/src/main/res/drawable/nine.png"
+    },
+    {
+        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/build/intermediates/res/merged/debug/drawable/fastforward.png",
+        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/drawable/fastforward.png"
+    },
+    {
+        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/build/intermediates/res/merged/debug/drawable/rewind.png",
+        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/drawable/rewind.png"
+    },
+    {
+        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/build/intermediates/res/merged/debug/drawable/two.png",
+        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/drawable/two.png"
+    },
+    {
+        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/build/intermediates/res/merged/debug/drawable/allfilesicon.png",
+        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/drawable/allfilesicon.png"
+    },
+    {
+        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/build/intermediates/res/merged/debug/drawable/treble.png",
+        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/drawable/treble.png"
+    },
+    {
+        "merged": "/Users/clogic/Workspace/MidiSheetMusic/app/build/intermediates/res/merged/debug/drawable/pause.png",
+        "source": "/Users/clogic/Workspace/MidiSheetMusic/app/src/main/res/drawable/pause.png"
+    },
+    {
+        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/build/intermediates/res/merged/debug/drawable/three.png",
+        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/drawable/three.png"
+    },
+    {
+        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/build/intermediates/res/merged/debug/drawable/four.png",
+        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/drawable/four.png"
+    },
+    {
+        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/build/intermediates/res/merged/debug/drawable/eight.png",
+        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/src/main/res/drawable/eight.png"
+    },
+    {
+        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/build/intermediates/res/merged/debug/drawable/twelve.png",
+        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/src/main/res/drawable/twelve.png"
+    },
+    {
+        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/build/intermediates/res/merged/debug/drawable/six.png",
+        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/drawable/six.png"
+    },
+    {
+        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/build/intermediates/res/merged/debug/drawable/icon.png",
+        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/drawable/icon.png"
+    },
+    {
+        "merged": "/Users/clogic/Workspace/MidiSheetMusic/app/build/intermediates/res/merged/debug/drawable/directoryicon.png",
+        "source": "/Users/clogic/Workspace/MidiSheetMusic/app/src/main/res/drawable/directoryicon.png"
+    },
+    {
+        "merged": "/Users/clogic/Workspace/MidiSheetMusic/app/build/intermediates/res/merged/debug/drawable/browsefilesicon.png",
+        "source": "/Users/clogic/Workspace/MidiSheetMusic/app/src/main/res/drawable/browsefilesicon.png"
+    },
+    {
+        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/build/intermediates/res/merged/debug/drawable/settings.png",
+        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/drawable/settings.png"
+=======
         "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/build/intermediates/res/merged/debug/drawable/three.png",
         "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/src/main/res/drawable/three.png"
     },
     {
         "merged": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/build/intermediates/res/merged/debug/drawable/rewind.png",
         "source": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/drawable/rewind.png"
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
     },
     {
-        "merged": "/Users/clogic/Workspace/MidiSheetMusic/app/build/intermediates/res/merged/debug/drawable/notepair.png",
-        "source": "/Users/clogic/Workspace/MidiSheetMusic/app/src/main/res/drawable/notepair.png"
+        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/build/intermediates/res/merged/debug/drawable/pause.png",
+        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/drawable/pause.png"
+    },
+    {
+        "merged": "/Users/clogic/Workspace/MidiSheetMusic/app/build/intermediates/res/merged/debug/drawable/three.png",
+        "source": "/Users/clogic/Workspace/MidiSheetMusic/app/src/main/res/drawable/three.png"
     },
     {
         "merged": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/build/intermediates/res/merged/debug/drawable/six.png",
         "source": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/drawable/six.png"
     },
     {
-        "merged": "/Users/clogic/Workspace/MidiSheetMusic/app/build/intermediates/res/merged/debug/drawable/bass.png",
-        "source": "/Users/clogic/Workspace/MidiSheetMusic/app/src/main/res/drawable/bass.png"
+        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/build/intermediates/res/merged/debug/drawable/directoryicon.png",
+        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/drawable/directoryicon.png"
     },
     {
         "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/build/intermediates/res/merged/debug/drawable/pause.png",

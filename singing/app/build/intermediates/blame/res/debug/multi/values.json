@@ -1,6 +1,10 @@
 [
     {
+<<<<<<< HEAD
+        "outputFile": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/build/intermediates/res/merged/debug/values/values.xml",
+=======
         "outputFile": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/build/intermediates/res/merged/debug/values/values.xml",
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
         "map": [
             {
                 "to": {
@@ -12,7 +16,11 @@
                     "endOffset": 307
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/values/arrays.xml",
+=======
                     "file": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/values/arrays.xml",
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
                     "position": {
                         "startLine": 90,
                         "startColumn": 4,
@@ -33,7 +41,11 @@
                     "endOffset": 498
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/values/arrays.xml",
+=======
                     "file": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/values/arrays.xml",
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
                     "position": {
                         "startLine": 98,
                         "startColumn": 4,
@@ -54,7 +66,11 @@
                     "endOffset": 1150
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/values/arrays.xml",
+=======
                     "file": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/values/arrays.xml",
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
                     "position": {
                         "startLine": 58,
                         "startColumn": 4,
@@ -75,7 +91,11 @@
                     "endOffset": 1519
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/values/arrays.xml",
+=======
                     "file": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/values/arrays.xml",
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
                     "position": {
                         "startLine": 74,
                         "startColumn": 4,
@@ -96,7 +116,11 @@
                     "endOffset": 1799
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/values/arrays.xml",
+=======
                     "file": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/values/arrays.xml",
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
                     "position": {
                         "startLine": 106,
                         "startColumn": 4,
@@ -117,7 +141,11 @@
                     "endOffset": 2007
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/values/arrays.xml",
+=======
                     "file": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/values/arrays.xml",
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
                     "position": {
                         "startLine": 115,
                         "startColumn": 4,
@@ -138,7 +166,11 @@
                     "endOffset": 2893
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/values/arrays.xml",
+=======
                     "file": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/values/arrays.xml",
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -159,7 +191,11 @@
                     "endOffset": 3549
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/values/arrays.xml",
+=======
                     "file": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/values/arrays.xml",
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
                     "position": {
                         "startLine": 30,
                         "startColumn": 4,
@@ -179,7 +215,11 @@
                     "endOffset": 3601
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/values/strings.xml",
+=======
                     "file": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/values/strings.xml",
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -198,7 +238,11 @@
                     "endOffset": 3668
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/values/strings.xml",
+=======
                     "file": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/values/strings.xml",
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
                     "position": {
                         "startLine": 36,
                         "startColumn": 4,
@@ -217,7 +261,11 @@
                     "endOffset": 3720
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/values/strings.xml",
+=======
                     "file": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/values/strings.xml",
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -236,7 +284,11 @@
                     "endOffset": 3782
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/values/strings.xml",
+=======
                     "file": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/values/strings.xml",
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
                     "position": {
                         "startLine": 25,
                         "startColumn": 4,
@@ -255,7 +307,11 @@
                     "endOffset": 3918
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/values/strings.xml",
+=======
                     "file": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/values/strings.xml",
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
                     "position": {
                         "startLine": 26,
                         "startColumn": 4,
@@ -274,7 +330,11 @@
                     "endOffset": 3990
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/values/strings.xml",
+=======
                     "file": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/values/strings.xml",
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
                     "position": {
                         "startLine": 18,
                         "startColumn": 4,
@@ -293,7 +353,11 @@
                     "endOffset": 4123
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/values/strings.xml",
+=======
                     "file": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/values/strings.xml",
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
@@ -312,7 +376,11 @@
                     "endOffset": 4165
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/values/strings.xml",
+=======
                     "file": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/values/strings.xml",
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -331,7 +399,11 @@
                     "endOffset": 4221
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/values/strings.xml",
+=======
                     "file": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/values/strings.xml",
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
                     "position": {
                         "startLine": 23,
                         "startColumn": 4,
@@ -350,7 +422,11 @@
                     "endOffset": 4281
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/values/strings.xml",
+=======
                     "file": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/values/strings.xml",
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
                     "position": {
                         "startLine": 28,
                         "startColumn": 4,
@@ -369,7 +445,11 @@
                     "endOffset": 4355
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/values/strings.xml",
+=======
                     "file": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/values/strings.xml",
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
                     "position": {
                         "startLine": 31,
                         "startColumn": 4,
@@ -388,7 +468,11 @@
                     "endOffset": 4421
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/values/strings.xml",
+=======
                     "file": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/values/strings.xml",
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
                     "position": {
                         "startLine": 33,
                         "startColumn": 4,
@@ -407,7 +491,11 @@
                     "endOffset": 4491
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/values/strings.xml",
+=======
                     "file": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/values/strings.xml",
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
                     "position": {
                         "startLine": 32,
                         "startColumn": 4,
@@ -426,7 +514,11 @@
                     "endOffset": 4584
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/values/strings.xml",
+=======
                     "file": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/values/strings.xml",
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
                     "position": {
                         "startLine": 30,
                         "startColumn": 4,
@@ -445,7 +537,11 @@
                     "endOffset": 4654
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/values/strings.xml",
+=======
                     "file": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/values/strings.xml",
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -464,7 +560,11 @@
                     "endOffset": 4716
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/values/strings.xml",
+=======
                     "file": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/values/strings.xml",
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
                     "position": {
                         "startLine": 27,
                         "startColumn": 4,
@@ -483,7 +583,11 @@
                     "endOffset": 4869
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/values/strings.xml",
+=======
                     "file": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/values/strings.xml",
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -502,7 +606,11 @@
                     "endOffset": 4928
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/values/strings.xml",
+=======
                     "file": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/values/strings.xml",
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -521,7 +629,11 @@
                     "endOffset": 5002
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/values/strings.xml",
+=======
                     "file": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/values/strings.xml",
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
                     "position": {
                         "startLine": 34,
                         "startColumn": 4,
@@ -540,7 +652,11 @@
                     "endOffset": 5065
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/values/strings.xml",
+=======
                     "file": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/values/strings.xml",
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
                     "position": {
                         "startLine": 35,
                         "startColumn": 4,
@@ -559,7 +675,11 @@
                     "endOffset": 5129
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/values/strings.xml",
+=======
                     "file": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/values/strings.xml",
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
@@ -578,7 +698,11 @@
                     "endOffset": 5220
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/values/strings.xml",
+=======
                     "file": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/values/strings.xml",
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
@@ -597,7 +721,11 @@
                     "endOffset": 5298
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/values/strings.xml",
+=======
                     "file": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/values/strings.xml",
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -616,7 +744,11 @@
                     "endOffset": 5370
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/values/strings.xml",
+=======
                     "file": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/values/strings.xml",
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
@@ -635,7 +767,11 @@
                     "endOffset": 5444
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/values/strings.xml",
+=======
                     "file": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/values/strings.xml",
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
@@ -654,7 +790,11 @@
                     "endOffset": 5514
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/values/strings.xml",
+=======
                     "file": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/values/strings.xml",
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -673,7 +813,11 @@
                     "endOffset": 5566
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/values/strings.xml",
+=======
                     "file": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/values/strings.xml",
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
@@ -692,7 +836,11 @@
                     "endOffset": 5629
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/values/strings.xml",
+=======
                     "file": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/values/strings.xml",
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
                     "position": {
                         "startLine": 29,
                         "startColumn": 4,
@@ -711,7 +859,11 @@
                     "endOffset": 5693
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/values/strings.xml",
+=======
                     "file": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/values/strings.xml",
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
@@ -730,7 +882,11 @@
                     "endOffset": 5747
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/values/strings.xml",
+=======
                     "file": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/values/strings.xml",
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -749,7 +905,11 @@
                     "endOffset": 5807
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/values/strings.xml",
+=======
                     "file": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/values/strings.xml",
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -768,7 +928,11 @@
                     "endOffset": 5883
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/values/strings.xml",
+=======
                     "file": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/values/strings.xml",
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
@@ -787,7 +951,11 @@
                     "endOffset": 6013
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/values/strings.xml",
+=======
                     "file": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/values/strings.xml",
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
                     "position": {
                         "startLine": 21,
                         "startColumn": 4,
@@ -806,7 +974,11 @@
                     "endOffset": 6071
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/values/strings.xml",
+=======
                     "file": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/values/strings.xml",
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
                     "position": {
                         "startLine": 24,
                         "startColumn": 4,
@@ -825,7 +997,11 @@
                     "endOffset": 6125
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/values/strings.xml",
+=======
                     "file": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/values/strings.xml",
+>>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
                     "position": {
                         "startLine": 22,
                         "startColumn": 4,

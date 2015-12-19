@@ -48,7 +48,7 @@ public class Receiver implements Runnable {
         ConcurrentLinkedQueue<Packet> packetQueue = new ConcurrentLinkedQueue<Packet>();
 
 		/*
-		 * Receiver thread 
+		 * Receiver thread
 		 */
         new Thread(new TcpReciever(Configuration.RECEIVE_PORT, packetQueue)).start();
 
