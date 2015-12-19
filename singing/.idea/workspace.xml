@@ -69,28 +69,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SheetMusicActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SheetMusicActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/midisheetmusic/SheetMusicActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="112" column="16" selection-start-line="112" selection-start-column="16" selection-end-line="112" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.42105263">
+              <caret line="113" column="8" selection-start-line="113" selection-start-column="8" selection-end-line="113" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MidiPlayer.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MidiPlayer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/midisheetmusic/MidiPlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33333334">
-              <caret line="697" column="29" selection-start-line="697" selection-start-column="29" selection-end-line="697" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="473" column="7" selection-start-line="473" selection-start-column="7" selection-end-line="473" selection-end-column="20" />
               <folding>
-                <element signature="e#13473#13762#0" expanded="true" />
-                <element signature="e#13761#13762#0" expanded="true" />
                 <element signature="e#17790#19607#0" expanded="true" />
                 <element signature="e#19606#19607#0" expanded="true" />
-                <element signature="e#25000#27077#0" expanded="true" />
-                <element signature="e#27076#27077#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1623,6 +1619,7 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/midisheetmusic/FileUri.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/midisheetmusic/IconArrayAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/midisheetmusic/MidiPlayer.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/midisheetmusic/SheetMusicActivity.java" />
       </list>
     </option>
   </component>
@@ -2102,14 +2099,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/midisheetmusic/SheetMusicActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="112" column="16" selection-start-line="112" selection-start-column="16" selection-end-line="112" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/midisheetmusic/SheetMusic.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2120,16 +2109,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/midisheetmusic/MidiPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="697" column="29" selection-start-line="697" selection-start-column="29" selection-end-line="697" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="473" column="7" selection-start-line="473" selection-start-column="7" selection-end-line="473" selection-end-column="20" />
           <folding>
-            <element signature="e#13473#13762#0" expanded="true" />
-            <element signature="e#13761#13762#0" expanded="true" />
             <element signature="e#17790#19607#0" expanded="true" />
             <element signature="e#19606#19607#0" expanded="true" />
-            <element signature="e#25000#27077#0" expanded="true" />
-            <element signature="e#27076#27077#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/midisheetmusic/SheetMusicActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42105263">
+          <caret line="113" column="8" selection-start-line="113" selection-start-column="8" selection-end-line="113" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
