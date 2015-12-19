@@ -119,9 +119,7 @@ public class WiFiDirectBroadcastReceiver extends BroadcastReceiver {
             if (networkInfo.isConnected()) {
                 // we are connected with the other device, request connection
                 // info to find group owner IP
-                DeviceDetailFragment fragment = (DeviceDetailFragment) activity.getFragmentManager().findFragmentById(
-                        R.id.frag_detail);
-                manager.requestConnectionInfo(channel, fragment);
+                manager.requestConnectionInfo(channel, activity);
             } else {
                 // It's a disconnect
                 Log.d(WiFiDirectActivity.TAG, "P2PACTION : WIFI_P2P_CONNECTION_CHANGED_ACTION -- DISCONNECT");

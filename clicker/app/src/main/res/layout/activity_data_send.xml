@@ -21,12 +21,4 @@
         android:layout_height="wrap_content"
         android:text="전송" />
 
-    <fragment
-        android:id="@+id/frag_detail"
-        class="com.vpang.clicker.wifi_direct.ui.DeviceDetailFragment"
-        android:layout_width="1dp"
-        android:layout_height="1dp">
-
-        <!-- Preview: layout=@layout/device_detail -->
-    </fragment>
 </LinearLayout>

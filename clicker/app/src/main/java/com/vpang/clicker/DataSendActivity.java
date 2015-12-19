@@ -6,15 +6,15 @@ import android.content.Context;
 import android.content.IntentFilter;
 import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiManager;
-import android.net.wifi.p2p.WifiP2pConfig;
-import android.net.wifi.p2p.WifiP2pDevice;
+import android.net.wifi.p2p.WifiP2pInfo;
 import android.net.wifi.p2p.WifiP2pManager;
-import android.net.wifi.p2p.WifiP2pManager.ChannelListener;
+import android.net.wifi.p2p.WifiP2pManager.ConnectionInfoListener;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.vpang.clicker.wifi_direct.WiFiDirectActivity;
@@ -23,14 +23,13 @@ import com.vpang.clicker.wifi_direct.router.AllEncompasingP2PClient;
 import com.vpang.clicker.wifi_direct.router.MeshNetworkManager;
 import com.vpang.clicker.wifi_direct.router.Packet;
 import com.vpang.clicker.wifi_direct.router.Sender;
-import com.vpang.clicker.wifi_direct.ui.DeviceListFragment.DeviceActionListener;
 import com.vpang.clicker.wifi_direct.wifi.WiFiBroadcastReceiver;
 import com.vpang.clicker.wifi_direct.wifi.WiFiDirectBroadcastReceiver;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class DataSendActivity extends Activity implements ChannelListener, DeviceActionListener {
+public class DataSendActivity extends Activity implements ConnectionInfoListener {
 
     @Bind(R.id.edit_data)
     EditText editText;
@@ -55,6 +54,13 @@ public class DataSendActivity extends Activity implements ChannelListener, Devic
 
     public void setIsWifiP2pEnabled(boolean isWifiP2pEnabled) {
         this.isWifiP2pEnabled = isWifiP2pEnabled;
+    }
+
+    public static void updateGroupChatMembersMessage() {
+        String s = "Currently in the network chatting: \n";
+        for (AllEncompasingP2PClient c : MeshNetworkManager.routingTable.values()) {
+            s += c.getMac() + "\n";
+        }
     }
 
     @Override
@@ -105,9 +111,6 @@ public class DataSendActivity extends Activity implements ChannelListener, Devic
         });
     }
 
-    /**
-     * register the BroadcastReceiver with the intent values to be matched
-     */
     @Override
     public void onResume() {
         super.onResume();
@@ -123,65 +126,7 @@ public class DataSendActivity extends Activity implements ChannelListener, Devic
         this.isVisible = false;
     }
 
-
-    @Override
-    public void showDetails(WifiP2pDevice device) {
-    }
-
-    @Override
-    public void connect(WifiP2pConfig config) {
-        manager.connect(channel, config, new WifiP2pManager.ActionListener() {
-
-            @Override
-            public void onSuccess() {
-                // WiFiDirectBroadcastReceiver will notify us. Ignore for now.
-            }
-
-            @Override
-            public void onFailure(int reason) {
-                Toast.makeText(DataSendActivity.this, "Connect failed. Retry.", Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
-
-    @Override
-    public void disconnect() {
-        manager.removeGroup(channel, new WifiP2pManager.ActionListener() {
-
-            @Override
-            public void onFailure(int reasonCode) {
-                Log.d(TAG, "Disconnect failed. Reason :" + reasonCode);
-
-            }
-
-            @Override
-            public void onSuccess() {
-//                fragment.getView().setVisibility(View.GONE);
-            }
-
-        });
-    }
-
-    @Override
-    public void onChannelDisconnected() {
-        // we will try once more
-        if (manager != null && !retryChannel) {
-            Toast.makeText(this, "Channel lost. Trying again", Toast.LENGTH_LONG).show();
-            retryChannel = true;
-            manager.initialize(this, getMainLooper(), this);
-        } else {
-            Toast.makeText(this, "Severe! Channel is probably lost premanently. Try Disable/Re-Enable P2P.",
-                    Toast.LENGTH_LONG).show();
-        }
-    }
-
-    @Override
-    public void cancelDisconnect() {
-
-    }
-
     public void connectToAccessPoint(String ssid, String passphrase) {
-
         Log.d(WiFiDirectActivity.TAG, "Trying to connect to AP : (" + ssid + "," + passphrase + ")");
 
         WifiConfiguration wc = new WifiConfiguration();
@@ -216,5 +161,13 @@ public class DataSendActivity extends Activity implements ChannelListener, Devic
     }
 
     public void resetData() {
+    }
+
+    @Override
+    public void onConnectionInfoAvailable(WifiP2pInfo info) {
+        Toast.makeText(getApplicationContext(), info.isGroupOwner + "<", Toast.LENGTH_LONG).show();
+        if (!info.isGroupOwner) {
+            Sender.queuePacket(new Packet(Packet.TYPE.HELLO, new byte[0], null, WiFiDirectBroadcastReceiver.MAC));
+        }
     }
 }

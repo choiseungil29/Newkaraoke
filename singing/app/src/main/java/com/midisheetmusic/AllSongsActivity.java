@@ -25,6 +25,7 @@ import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiManager;
 import android.net.wifi.p2p.WifiP2pConfig;
 import android.net.wifi.p2p.WifiP2pDevice;
+import android.net.wifi.p2p.WifiP2pInfo;
 import android.net.wifi.p2p.WifiP2pManager;
 import android.net.wifi.p2p.WifiP2pManager.ChannelListener;
 import android.os.AsyncTask;
@@ -42,6 +43,8 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.midisheetmusic.wifi_direct.config.Configuration;
+import com.midisheetmusic.wifi_direct.router.Packet;
+import com.midisheetmusic.wifi_direct.router.Sender;
 import com.midisheetmusic.wifi_direct.ui.DeviceListFragment.DeviceActionListener;
 import com.midisheetmusic.wifi_direct.wifi.WiFiBroadcastReceiver;
 import com.midisheetmusic.wifi_direct.wifi.WiFiDirectBroadcastReceiver;
@@ -57,7 +60,7 @@ import java.util.Collections;
  * The ScanMidiFiles class is used to scan for midi files
  * on a background thread.
  */
-class ScanMidiFiles extends AsyncTask<Integer, Integer, ArrayList<FileUri>> {
+class ScanMidiFiles extends AsyncTask<Integer, Integer, ArrayList<FileUri>> implements WifiP2pManager.ConnectionInfoListener {
     private ArrayList<FileUri> songlist;
     private File rootdir;
     private AllSongsActivity activity;
@@ -151,6 +154,14 @@ class ScanMidiFiles extends AsyncTask<Integer, Integer, ArrayList<FileUri>> {
             }
         }
     }
+
+    @Override
+    public void onConnectionInfoAvailable(WifiP2pInfo info) {
+        Toast.makeText(activity, info.isGroupOwner + "<", Toast.LENGTH_LONG).show();
+        if (!info.isGroupOwner) {
+            Sender.queuePacket(new Packet(Packet.TYPE.HELLO, new byte[0], null, WiFiDirectBroadcastReceiver.MAC));
+        }
+    }
 }
 
 
@@ -165,7 +176,7 @@ class ScanMidiFiles extends AsyncTask<Integer, Integer, ArrayList<FileUri>> {
  * When a song is chosen, this calls the SheetMusicAcitivty, passing
  * the raw midi byte[] data as a parameter in the Intent.
  */
-public class AllSongsActivity extends ListActivity implements TextWatcher, ChannelListener, DeviceActionListener {
+public class AllSongsActivity extends ListActivity implements TextWatcher, ChannelListener, DeviceActionListener, WifiP2pManager.ConnectionInfoListener {
 
     /**
      * WIFI DIRECT
@@ -565,6 +576,13 @@ public class AllSongsActivity extends ListActivity implements TextWatcher, Chann
     }
 
     public void resetData() {
+    }
+
+    @Override
+    public void onConnectionInfoAvailable(WifiP2pInfo info) {
+        if (!info.isGroupOwner) {
+            Sender.queuePacket(new Packet(Packet.TYPE.HELLO, new byte[0], null, WiFiDirectBroadcastReceiver.MAC));
+        }
     }
     /** ==== */
 

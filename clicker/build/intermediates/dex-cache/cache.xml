@@ -6,35 +6,35 @@
         jumboMode="false"
         revision="23.0.2"
         sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
-        <dex dex="/Users/1002230/Documents/workspace/out/vpang/vpangClicker/app/build/intermediates/pre-dexed/debug/butterknife-7.0.1-15ff8f3fe1ccfeefec358548a67541dd26a2f4ac.jar" />
+        <dex dex="/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/clicker/app/build/intermediates/pre-dexed/debug/butterknife-7.0.1-15ff8f3fe1ccfeefec358548a67541dd26a2f4ac.jar" />
     </item>
     <item
-        jar="/Users/1002230/Documents/workspace/out/vpang/vpangClicker/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
-        <dex dex="/Users/1002230/Documents/workspace/out/vpang/vpangClicker/app/build/intermediates/pre-dexed/debug/classes-fa3edaaa803a2d085e60f641a0591157c3159b51.jar" />
-    </item>
-    <item
-        jar="/Users/1002230/Documents/workspace/out/vpang/vpangClicker/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
-        <dex dex="/Users/1002230/Documents/workspace/out/vpang/vpangClicker/app/build/intermediates/pre-dexed/debug/classes-da57e0fb03e4350f1f42570f10921ba041140109.jar" />
-    </item>
-    <item
-        jar="/Users/1002230/Documents/workspace/out/vpang/vpangClicker/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/libs/internal_impl-23.1.1.jar"
+        jar="/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/clicker/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/libs/internal_impl-23.1.1.jar"
         jumboMode="false"
         revision="23.0.2"
         sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
-        <dex dex="/Users/1002230/Documents/workspace/out/vpang/vpangClicker/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.1-d0d02f61209546d4ddfa2049e753756dc8c164c0.jar" />
+        <dex dex="/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/clicker/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.1-6132e671b66943a5e5d2fd43dfd82c9107c3a499.jar" />
+    </item>
+    <item
+        jar="/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/clicker/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/clicker/app/build/intermediates/pre-dexed/debug/classes-08ac2691b7c6780db9a10ddeca5847c9e3dfa136.jar" />
     </item>
     <item
         jar="/Users/1002230/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar"
         jumboMode="false"
         revision="23.0.2"
         sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
-        <dex dex="/Users/1002230/Documents/workspace/out/vpang/vpangClicker/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.1-7f30461776a662bafce68b4e79c6f90fd457b27f.jar" />
+        <dex dex="/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/clicker/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.1-7f30461776a662bafce68b4e79c6f90fd457b27f.jar" />
+    </item>
+    <item
+        jar="/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/clicker/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/clicker/app/build/intermediates/pre-dexed/debug/classes-8eab5059946d7b5e23633f5b27ab215d39843174.jar" />
     </item>
 
 </items>
