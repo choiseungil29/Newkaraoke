@@ -577,6 +577,7 @@ public class MidiPlayer extends LinearLayout {
         prevPulseTime = 0;
         setVisibility(View.VISIBLE);
         StopSound();
+        ((SheetMusicActivity)activity).stopRecord();
     }
 
     /** Rewind the midi music back one measure.

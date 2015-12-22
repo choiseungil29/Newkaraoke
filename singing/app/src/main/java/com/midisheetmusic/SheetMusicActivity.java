@@ -448,6 +448,8 @@ public class SheetMusicActivity extends Activity implements SurfaceHolder.Callba
             recorder.setVideoEncoder(MediaRecorder.VideoEncoder.H264);
             // 사운드 코덱 지정
             recorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
+            recorder.setVideoSize(1280, 720);
+            recorder.setVideoFrameRate(60);
 
             File dir = new File(Environment.getExternalStorageDirectory().getPath() + "/vpang/");
             if (!dir.exists()) {

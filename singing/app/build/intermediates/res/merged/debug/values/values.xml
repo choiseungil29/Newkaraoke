@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <string-array name="combine_interval_entries">
+        <item>20 milliseconds</item>
+        <item>40 milliseconds</item>
+        <item>60 milliseconds</item>
+        <item>80 milliseconds</item>
+        <item>100 milliseconds</item>
+    </string-array>
+    <string-array name="combine_interval_values">
+        <item>20</item>
+        <item>40</item>
+        <item>60</item>
+        <item>80</item>
+        <item>100</item>
+    </string-array>
+    <string-array name="key_signature_entries">
+        <item>Default</item>
+        <item>A major         F# minor </item>
+        <item>B-flat major   G minor </item>
+        <item>B major         A-flat minor</item>
+        <item>C major         A minor</item>
+        <item>D-flat major   B-flat minor</item>
+        <item>D major         B minor</item>
+        <item>E-flat major   C minor</item>
+        <item>E major         C# minor</item>
+        <item>F major         D minor</item>
+        <item>G-flat major   E-flat minor</item>
+        <item>G major         E minor</item>
+        <item>A-flat major    F minor</item>
+    </string-array>
+    <string-array name="key_signature_values">
+        <item>-1</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+    </string-array>
+    <string-array name="show_note_letter_entries">
+        <item>None</item>
+        <item>Letters (A, A#)</item>
+        <item>Fixed Do-Re-Mi</item>
+        <item>Movable Do-Re-Mi</item>
+        <item>Fixed Numbers</item>
+        <item>Movable Numbers</item>
+    </string-array>
+    <string-array name="show_note_letter_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="transpose_entries">
+        <item>Up 12 notes</item>
+        <item>Up 11 notes</item>
+        <item>Up 10 notes</item>
+        <item>Up 9 notes</item>
+        <item>Up 8 notes</item>
+        <item>Up 7 notes</item>
+        <item>Up 6 notes</item>
+        <item>Up 5 notes</item>
+        <item>Up 4 notes</item>
+        <item>Up 3 notes</item>
+        <item>Up 2 notes</item>
+        <item>Up 1 note</item>
+        <item>None</item>
+        <item>Down 1 note</item>
+        <item>Down 2 notes</item>
+        <item>Down 3 notes</item>
+        <item>Down 4 notes</item>
+        <item>Down 5 notes</item>
+        <item>Down 6 notes</item>
+        <item>Down 7 notes</item>
+        <item>Down 8 notes</item>
+        <item>Down 9 notes</item>
+        <item>Down 10 notes</item>
+        <item>Down 11 notes</item>
+        <item>Down 12 notes</item>
+    </string-array>
+    <string-array name="transpose_values">
+        <item>12</item>
+        <item>11</item>
+        <item>10</item>
+        <item>9</item>
+        <item>8</item>
+        <item>7</item>
+        <item>6</item>
+        <item>5</item>
+        <item>4</item>
+        <item>3</item>
+        <item>2</item>
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+        <item>-2</item>
+        <item>-3</item>
+        <item>-4</item>
+        <item>-5</item>
+        <item>-6</item>
+        <item>-7</item>
+        <item>-8</item>
+        <item>-9</item>
+        <item>-10</item>
+        <item>-11</item>
+        <item>-12</item>
+    </string-array>
+    <color name="common_action_bar_splitter">#d2d2d2</color>
+    <color name="common_signin_btn_dark_text_default">@android:color/white</color>
+    <color name="common_signin_btn_dark_text_disabled">#FFAAAAAA</color>
+    <color name="common_signin_btn_dark_text_focused">@android:color/white</color>
+    <color name="common_signin_btn_dark_text_pressed">@android:color/white</color>
+    <color name="common_signin_btn_default_background">#FFDD4B39</color>
+    <color name="common_signin_btn_light_text_default">#FF737373</color>
+    <color name="common_signin_btn_light_text_disabled">#FFAAAAAA</color>
+    <color name="common_signin_btn_light_text_focused">#FF737373</color>
+    <color name="common_signin_btn_light_text_pressed">@android:color/white</color>
+    <declare-styleable name="LoadingImageView"><attr format="enum" name="imageAspectRatioAdjust"><enum name="none" value="0"/><enum name="adjust_width" value="1"/><enum name="adjust_height" value="2"/></attr><attr format="float" name="imageAspectRatio"/><attr format="boolean" name="circleCrop"/></declare-styleable>
+    <integer name="google_play_services_version">8115000</integer>
+    <string name="app_name">VPang Karaoke</string>
+    <string name="auth_google_play_services_client_facebook_display_name">Facebook</string>
+    <string name="auth_google_play_services_client_google_display_name">Google</string>
+    <string name="browse_files_str">Browse for MIDI Files</string>
+    <string name="choose_song">Choose Song</string>
+    <string name="combine_interval">Combine Interval</string>
+    <string name="combine_interval_summary">Notes within the given interval (in milliseconds) are combined into a single chord</string>
+    <string name="combine_to_two_staffs">Combine To Two Staffs</string>
+    <string name="combine_to_two_staffs_summary">Combine all the tracks into two staffs (left hand and right hand staffs). </string>
+    <string name="common_android_wear_notification_needs_update_text"><ns1:g id="app_name">%1$s</ns1:g> requires an update to the Android Wear app.</string>
+    <string name="common_android_wear_update_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t run unless you update the Android Wear app.</string>
+    <string msgid="6006316683626838685" name="common_android_wear_update_title">Update Android Wear</string>
+    <string name="common_google_play_services_api_unavailable_text"><ns1:g id="app_name">%1$s</ns1:g> requires one or more Google Play services that are not currently available. Please contact the developer for assistance.</string>
+    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Enable Google Play services</string>
+    <string msgid="227660514972886228" name="common_google_play_services_enable_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t work unless you enable Google Play services.</string>
+    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Enable Google Play services</string>
+    <string name="common_google_play_services_error_notification_requested_by_msg">Requested by <ns1:g id="app_name">%1$s</ns1:g></string>
+    <string msgid="7153882981874058840" name="common_google_play_services_install_button">Get Google Play services</string>
+    <string msgid="2122112764540849864" name="common_google_play_services_install_text_phone"><ns1:g id="app_name">%1$s</ns1:g> won\'t run without Google Play services, which are missing from your phone.</string>
+    <string msgid="7351599665250191022" name="common_google_play_services_install_text_tablet"><ns1:g id="app_name">%1$s</ns1:g> won\'t run without Google Play services, which are missing from your tablet.</string>
+    <string msgid="7215213145546190223" name="common_google_play_services_install_title">Get Google Play services</string>
+    <string name="common_google_play_services_invalid_account_text">The specified account does not exist on this device. Please choose a different account.</string>
+    <string name="common_google_play_services_invalid_account_title">Invalid Account</string>
+    <string name="common_google_play_services_needs_enabling_title">An application requires Google Play services to be enabled.</string>
+    <string name="common_google_play_services_network_error_text">A data connection is required to connect to Google Play services.</string>
+    <string name="common_google_play_services_network_error_title">Network Error</string>
+    <string name="common_google_play_services_notification_needs_update_title">An application requires an update for Google Play services.</string>
+    <string name="common_google_play_services_notification_ticker">Google Play services error</string>
+    <string name="common_google_play_services_sign_in_failed_text">Error signing in the specified account. Please choose a different account.</string>
+    <string name="common_google_play_services_sign_in_failed_title">Sign in failed</string>
+    <string name="common_google_play_services_unknown_issue">Unknown issue with Google Play services.</string>
+    <string name="common_google_play_services_unsupported_text"><ns1:g id="app_name">%1$s</ns1:g> relies on Google Play services, which is not supported by your device. Contact the manufacturer for assistance.</string>
+    <string name="common_google_play_services_unsupported_title">Google Play services</string>
+    <string msgid="6556509956452265614" name="common_google_play_services_update_button">Update</string>
+    <string msgid="9053896323427875356" name="common_google_play_services_update_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t run unless you update Google Play services.</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">Update Google Play services</string>
+    <string name="common_google_play_services_updating_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t run without Google Play services, which are currently updating.</string>
+    <string name="common_google_play_services_updating_title">Google Play services are updating</string>
+    <string name="common_open_on_phone">Open on phone</string>
+    <string name="help_str">Help</string>
+    <string name="key_signature">Key Signature</string>
+    <string name="left_hand_color">Left Hand Color</string>
+    <string name="play_measures_in_loop">Play Measures in a Loop</string>
+    <string name="play_measures_in_loop_end">End Measure</string>
+    <string name="play_measures_in_loop_start">Start Measure</string>
+    <string name="play_measures_in_loop_title">Settings for Play Measures in a Loop</string>
+    <string name="restore_defaults">Restore Default Settings</string>
+    <string name="right_hand_color">Right Hand Color</string>
+    <string name="save_images_descr_str">Save the sheet music as images, in the directory /Pictures/MidiSheetMusic, with the following filename</string>
+    <string name="save_images_str">Save As Images</string>
+    <string name="scan_button_title">Scan SD Card for MIDI files</string>
+    <string name="scan_files_str">Scan for MIDI Files</string>
+    <string name="scroll_vertically">Scroll Vertically</string>
+    <string name="select_instruments_per_track">Select Instruments For Each Track</string>
+    <string name="select_tracks_to_display">Select Tracks to Display</string>
+    <string name="select_tracks_to_mute">Select Tracks to Mute</string>
+    <string name="set_all_to_piano">Set All Instruments to Piano</string>
+    <string name="sheet_prefs_title">Sheet Music Preferences</string>
+    <string name="show_lyrics">Show Lyrics</string>
+    <string name="show_measures">Show Measure Numbers</string>
+    <string name="show_note_letters">Show Note Letters</string>
+    <string name="show_piano">Show the Piano</string>
+    <string name="song_settings_str">Song Settings</string>
+    <string name="split_to_two_staffs">Split Track Into Two Staffs</string>
+    <string name="split_to_two_staffs_summary">Split the single track into two staffs (left hand and right hand staffs).</string>
+    <string name="time_signature">Time Signature</string>
+    <string name="transpose">Transpose Notes</string>
+</resources>

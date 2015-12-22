@@ -1,36 +1,10 @@
 [
     {
-<<<<<<< HEAD
-        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/build/intermediates/res/merged/debug/menu/sheet_menu.xml",
-        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/menu/sheet_menu.xml"
-=======
         "merged": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/build/intermediates/res/merged/debug/menu/sheet_menu.xml",
         "source": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/menu/sheet_menu.xml"
->>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
     },
     {
-        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/build/intermediates/res/merged/debug/menu/sheet_menu.xml",
-        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/src/main/res/menu/sheet_menu.xml"
-    },
-    {
-        "merged": "/Users/clogic/Workspace/MidiSheetMusic/app/build/intermediates/res/merged/debug/menu/choose_song_menu.xml",
-        "source": "/Users/clogic/Workspace/MidiSheetMusic/app/src/main/res/menu/choose_song_menu.xml"
-    },
-    {
-        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/build/intermediates/res/merged/debug/menu/choose_song_menu.xml",
-        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/src/main/res/menu/choose_song_menu.xml"
-    },
-    {
-<<<<<<< HEAD
-        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/build/intermediates/res/merged/debug/menu/choose_song_menu.xml",
-        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/menu/choose_song_menu.xml"
-=======
         "merged": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/build/intermediates/res/merged/debug/menu/choose_song_menu.xml",
         "source": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/menu/choose_song_menu.xml"
->>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
-    },
-    {
-        "merged": "/Users/clogic/Workspace/MidiSheetMusic/app/build/intermediates/res/merged/debug/menu/sheet_menu.xml",
-        "source": "/Users/clogic/Workspace/MidiSheetMusic/app/src/main/res/menu/sheet_menu.xml"
     }
 ]

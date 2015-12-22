@@ -1,2 +1,3 @@
-/Users/clogic/Workspace/MidiSheetMusic/singing/app/build/intermediates/transforms/instantRun/debug/folders/1/1/main/com/midisheetmusic/IconArrayAdapter.class
-/Users/clogic/Workspace/MidiSheetMusic/singing/app/build/intermediates/transforms/instantRun/debug/folders/1/1/main/com/midisheetmusic/FileUri.class
+/Users/clogic/Workspace/MidiSheetMusic/singing/app/build/intermediates/transforms/instantRun/debug/folders/1/1/main/com/midisheetmusic/SheetMusicActivity.class
+/Users/clogic/Workspace/MidiSheetMusic/singing/app/build/intermediates/transforms/instantRun/debug/folders/1/1/main/com/midisheetmusic/MidiSheetMusicActivity$2.class
+/Users/clogic/Workspace/MidiSheetMusic/singing/app/build/intermediates/transforms/instantRun/debug/folders/1/1/main/com/midisheetmusic/MidiSheetMusicActivity.class
