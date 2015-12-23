@@ -14,6 +14,7 @@ package com.midisheetmusic;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -21,6 +22,7 @@ import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.hardware.Camera;
+import android.media.AudioManager;
 import android.media.CamcorderProfile;
 import android.media.MediaRecorder;
 import android.media.MediaScannerConnection;
@@ -139,6 +141,9 @@ public class SheetMusicActivity extends Activity {
 //        surfaceView = new SurfaceView(this);
 //        surfaceView.setLayoutParams(new LinearLayout.LayoutParams(1, 1));
 //        surfaceView.setBackgroundColor(Color.BLACK);
+        AudioManager mgr = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
+        mgr.setStreamMute(AudioManager.STREAM_SYSTEM, true);
+
         preview = new CameraPreview(this, getApplicationContext(), camera);
         preview.setLayoutParams(new LinearLayout.LayoutParams(1, 1));
         is_recording = false;
