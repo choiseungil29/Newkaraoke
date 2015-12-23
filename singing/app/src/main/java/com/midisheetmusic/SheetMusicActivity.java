@@ -20,23 +20,25 @@ import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
-import android.graphics.Color;
+import android.hardware.Camera;
+import android.media.CamcorderProfile;
 import android.media.MediaRecorder;
 import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.SurfaceHolder;
-import android.view.SurfaceView;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
+
+import com.midisheetmusic.camera.CameraPreview;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -50,20 +52,20 @@ import java.util.zip.CRC32;
 
 /**
  * @class SheetMusicActivity
- * <p/>
+ * <p>
  * The SheetMusicActivity is the main activity. The main components are:
  * - MidiPlayer : The buttons and speed bar at the top.
  * - Piano : For highlighting the piano notes during playback.
  * - SheetMusic : For highlighting the sheet music notes during playback.
  */
-public class SheetMusicActivity extends Activity implements SurfaceHolder.Callback {
+public class SheetMusicActivity extends Activity {
 
     //Recode
-    private SurfaceView surfaceView;
-    private SurfaceHolder holder;
+    private Camera camera;
+    private CameraPreview preview;
     private MediaRecorder recorder;
     private boolean is_holder_created;
-    private boolean is_recording;
+    public boolean is_recording;
 
     //
     public static final String MidiTitleID = "MidiTitleID";
@@ -128,16 +130,20 @@ public class SheetMusicActivity extends Activity implements SurfaceHolder.Callba
         createSheetMusic(options);
         player.Play();
         /** 시작하는 주석 */
+
     }
 
+
     void initRecodeView() {
-        surfaceView = new SurfaceView(this);
-        surfaceView.setLayoutParams(new LinearLayout.LayoutParams(1, 1));
-        surfaceView.setBackgroundColor(Color.BLACK);
+//        surfaceView = new SurfaceView(this);
+//        surfaceView.setLayoutParams(new LinearLayout.LayoutParams(1, 1));
+//        surfaceView.setBackgroundColor(Color.BLACK);
+        preview = new CameraPreview(this, getApplicationContext(), camera);
+        preview.setLayoutParams(new LinearLayout.LayoutParams(1, 1));
         is_recording = false;
 
-        holder = surfaceView.getHolder();
-        holder.addCallback(this);
+//        holder = surfaceView.getHolder();
+//        holder.addCallback(this);
     }
 
     /* Create the MidiPlayer and Piano views */
@@ -147,7 +153,7 @@ public class SheetMusicActivity extends Activity implements SurfaceHolder.Callba
         layout.setOrientation(LinearLayout.VERTICAL);
         player = new MidiPlayer(this);
         piano = new Piano(this);
-        layout.addView(surfaceView);
+        layout.addView(preview);
         layout.addView(player);
         layout.addView(piano);
         setContentView(layout);
@@ -158,8 +164,7 @@ public class SheetMusicActivity extends Activity implements SurfaceHolder.Callba
     /**
      * Create the SheetMusic view with the given options
      */
-    private void
-    createSheetMusic(MidiOptions options) {
+    private void createSheetMusic(MidiOptions options) {
         if (sheet != null) {
             layout.removeView(sheet);
         }
@@ -380,6 +385,10 @@ public class SheetMusicActivity extends Activity implements SurfaceHolder.Callba
     @Override
     protected void onResume() {
         super.onResume();
+        if (camera == null) {
+            camera = Camera.open(findBackFacingCamera());
+            preview.refreshCamera(camera);
+        }
         layout.requestLayout();
         player.invalidate();
         piano.invalidate();
@@ -399,75 +408,87 @@ public class SheetMusicActivity extends Activity implements SurfaceHolder.Callba
             player.Pause();
         }
         super.onPause();
+        releaseCamera();
     }
 
     //Reocde
     @Override
     public void onDestroy() {
         super.onDestroy();
-        stopRecord();
-    }
-
-    @Override
-    public void surfaceChanged(SurfaceHolder arg0, int arg1, int arg2, int arg3) {
-    }
-
-    @Override
-    public void surfaceCreated(SurfaceHolder arg0) {
-        is_holder_created = true;
-        Toast.makeText(this, "이제 녹화를 시작할 수 있습니다.",
-                Toast.LENGTH_SHORT).show();
-
-        startRecord();
-    }
-
-    @Override
-    public void surfaceDestroyed(SurfaceHolder arg0) {
-        is_holder_created = false;
     }
 
     public void stopRecord() {
         if (recorder != null) {
-            try {
-                recorder.stop();
-                recorder.release();
-            } catch (Exception e) {
-            }
-            recorder = null;
+            recorder.stop();
+            releaseMediaRecorder();
+            Toast.makeText(getApplicationContext(), "Video captured!", Toast.LENGTH_LONG).show();
         }
     }
 
     public void startRecord() {
-        try {
-            recorder = new MediaRecorder();
-            recorder.setVideoSource(MediaRecorder.VideoSource.CAMERA);
-            // 녹음될 사운드의 출처
-            recorder.setAudioSource(MediaRecorder.AudioSource.MIC);
-            // 사운드의 저장 형식
-            recorder.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4);
-            recorder.setVideoEncoder(MediaRecorder.VideoEncoder.H264);
-            // 사운드 코덱 지정
-            recorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
-
-            File dir = new File(Environment.getExternalStorageDirectory().getPath() + "/vpang/");
-            if (!dir.exists()) {
-                dir.mkdirs();
+        Toast.makeText(getApplicationContext(), "녹화시작", Toast.LENGTH_LONG).show();
+        if (!prepareMediaRecorder()) {
+            Toast.makeText(getApplicationContext(), "Fail in prepareMediaRecorder()!\n - Ended -", Toast.LENGTH_LONG).show();
+            finish();
+        }
+        // work on UiThread for better performance
+        runOnUiThread(new Runnable() {
+            public void run() {
+                try {
+                    is_recording = true;
+                    recorder.start();
+                } catch (final Exception ex) {
+                    ex.printStackTrace();
+                }
             }
-            File file = File.createTempFile(getNewFileName(), ".mp4", dir);
+        });
+    }
 
-            recorder.setOutputFile(file.getAbsolutePath());
+    private boolean prepareMediaRecorder() {
+        File dir = new File(Environment.getExternalStorageDirectory().getPath() + "/vpang/");
+        if (!dir.exists()) {
+            dir.mkdirs();
+        }
+        recorder = new MediaRecorder();
+        camera.unlock();
+        recorder.setCamera(camera);
+        recorder.setAudioSource(MediaRecorder.AudioSource.CAMCORDER);
+        recorder.setVideoSource(MediaRecorder.VideoSource.CAMERA);
+        recorder.setProfile(CamcorderProfile.get(CamcorderProfile.QUALITY_720P));
 
-            /** 미리보기 연결 */
-            recorder.setPreviewDisplay(holder.getSurface());
+        recorder.setOutputFile(Environment.getExternalStorageDirectory().getPath() + "/vpang/" + getNewFileName() + ".mp4");
+        recorder.setMaxDuration(600000 * 10); // Set max duration 60 sec.
+        recorder.setMaxFileSize(50000000 * 20); // Set max file size 50M
 
-            // 녹음의 시작
+
+        try {
             recorder.prepare();
-            recorder.start();
-        } catch (Exception e) {
-            Log.d("kkk","-=========================");
+        } catch (IllegalStateException e) {
             e.printStackTrace();
-            Toast.makeText(this, "영상 녹화에 실패했습니다.",
-                    Toast.LENGTH_SHORT).show();
+            releaseMediaRecorder();
+            return false;
+        } catch (IOException e) {
+            e.printStackTrace();
+            releaseMediaRecorder();
+            return false;
+        }
+        return true;
+
+    }
+
+    private void releaseMediaRecorder() {
+        if (recorder != null) {
+            recorder.reset();
+            recorder.release();
+            recorder = null;
+            camera.lock();
+        }
+    }
+
+    private void releaseCamera() {
+        if (camera != null) {
+            camera.release();
+            camera = null;
         }
     }
 
@@ -480,8 +501,22 @@ public class SheetMusicActivity extends Activity implements SurfaceHolder.Callba
         int mi = c.get(Calendar.MINUTE);
         int ss = c.get(Calendar.SECOND);
 
-        return String.format(Locale.getDefault(), "%04d-%02d-%02d %02d;%02d;%02d", yy, mm, dd, hh, mi, ss);
+        return String.format(Locale.getDefault(), "%04d-%02d-%02d %02d-%02d-%02d", yy, mm, dd, hh, mi, ss);
 
+    }
+
+    private int findBackFacingCamera() {
+        int cameraId = -1;
+        int numberOfCameras = Camera.getNumberOfCameras();
+        for (int i = 0; i < numberOfCameras; i++) {
+            Camera.CameraInfo info = new Camera.CameraInfo();
+            Camera.getCameraInfo(i, info);
+            if (info.facing == Camera.CameraInfo.CAMERA_FACING_BACK) {
+                cameraId = i;
+                break;
+            }
+        }
+        return cameraId;
     }
 
 }

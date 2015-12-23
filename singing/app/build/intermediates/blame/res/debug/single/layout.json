@@ -1,54 +1,5 @@
 [
     {
-        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/build/intermediates/res/merged/debug/layout/help.xml",
-        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/src/main/res/layout/help.xml"
-    },
-    {
-        "merged": "/Users/clogic/Workspace/MidiSheetMusic/app/build/intermediates/res/merged/debug/layout/main.xml",
-        "source": "/Users/clogic/Workspace/MidiSheetMusic/app/src/main/res/layout/main.xml"
-    },
-    {
-        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/build/intermediates/res/merged/debug/layout/row_peers.xml",
-        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/src/main/res/layout/row_peers.xml"
-<<<<<<< HEAD
-    },
-    {
-        "merged": "/Users/clogic/Workspace/MidiSheetMusic/app/build/intermediates/res/merged/debug/layout/save_images_dialog.xml",
-        "source": "/Users/clogic/Workspace/MidiSheetMusic/app/src/main/res/layout/save_images_dialog.xml"
-    },
-    {
-        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/build/intermediates/res/merged/debug/layout/device_list.xml",
-        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/src/main/res/layout/device_list.xml"
-    },
-    {
-        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/build/intermediates/res/merged/debug/layout/device_detail.xml",
-        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/src/main/res/layout/device_detail.xml"
-    },
-    {
-        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/build/intermediates/res/merged/debug/layout/device_list.xml",
-        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/layout/device_list.xml"
-    },
-    {
-        "merged": "/Users/clogic/Workspace/MidiSheetMusic/app/build/intermediates/res/merged/debug/layout/choose_song.xml",
-        "source": "/Users/clogic/Workspace/MidiSheetMusic/app/src/main/res/layout/choose_song.xml"
-    },
-    {
-        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/build/intermediates/res/merged/debug/layout/color_preference.xml",
-        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/layout/color_preference.xml"
-    },
-    {
-        "merged": "/Users/clogic/Workspace/MidiSheetMusic/app/build/intermediates/res/merged/debug/layout/choose_song_item.xml",
-        "source": "/Users/clogic/Workspace/MidiSheetMusic/app/src/main/res/layout/choose_song_item.xml"
-    },
-    {
-        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/build/intermediates/res/merged/debug/layout/color_preference.xml",
-        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/src/main/res/layout/color_preference.xml"
-    },
-    {
-        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/build/intermediates/res/merged/debug/layout/choose_song.xml",
-        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/src/main/res/layout/choose_song.xml"
-    },
-    {
         "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/build/intermediates/res/merged/debug/layout/save_images_dialog.xml",
         "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/layout/save_images_dialog.xml"
     },
@@ -59,45 +10,10 @@
     {
         "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/build/intermediates/res/merged/debug/layout/row_peers.xml",
         "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/layout/row_peers.xml"
-=======
->>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
     },
     {
-        "merged": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/build/intermediates/res/merged/debug/layout/help.xml",
-        "source": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/layout/help.xml"
-    },
-    {
-        "merged": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/build/intermediates/res/merged/debug/layout/choose_song.xml",
-        "source": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/layout/choose_song.xml"
-    },
-    {
-<<<<<<< HEAD
-        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/build/intermediates/res/merged/debug/layout/main.xml",
-        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/src/main/res/layout/main.xml"
-    },
-    {
-        "merged": "/Users/clogic/Workspace/MidiSheetMusic/app/build/intermediates/res/merged/debug/layout/help.xml",
-        "source": "/Users/clogic/Workspace/MidiSheetMusic/app/src/main/res/layout/help.xml"
-=======
-        "merged": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/build/intermediates/res/merged/debug/layout/row_peers.xml",
-        "source": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/layout/row_peers.xml"
-    },
-    {
-        "merged": "/Users/clogic/Workspace/MidiSheetMusic/app/build/intermediates/res/merged/debug/layout/save_images_dialog.xml",
-        "source": "/Users/clogic/Workspace/MidiSheetMusic/app/src/main/res/layout/save_images_dialog.xml"
-    },
-    {
-        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/build/intermediates/res/merged/debug/layout/device_list.xml",
-        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/src/main/res/layout/device_list.xml"
-    },
-    {
-        "merged": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/build/intermediates/res/merged/debug/layout/row_devices.xml",
-        "source": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/layout/row_devices.xml"
-    },
-    {
-        "merged": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/build/intermediates/res/merged/debug/layout/color_preference.xml",
-        "source": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/layout/color_preference.xml"
->>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
+        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/build/intermediates/res/merged/debug/layout/device_list.xml",
+        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/layout/device_list.xml"
     },
     {
         "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/build/intermediates/res/merged/debug/layout/file_browser.xml",
@@ -108,81 +24,20 @@
         "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/layout/choose_song.xml"
     },
     {
+        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/build/intermediates/res/merged/debug/layout/color_preference.xml",
+        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/layout/color_preference.xml"
+    },
+    {
         "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/build/intermediates/res/merged/debug/layout/choose_song_item.xml",
         "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/layout/choose_song_item.xml"
     },
     {
-<<<<<<< HEAD
         "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/build/intermediates/res/merged/debug/layout/main.xml",
         "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/layout/main.xml"
     },
     {
         "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/build/intermediates/res/merged/debug/layout/device_detail.xml",
         "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/src/main/res/layout/device_detail.xml"
-=======
-        "merged": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/build/intermediates/res/merged/debug/layout/main.xml",
-        "source": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/layout/main.xml"
-    },
-    {
-        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/build/intermediates/res/merged/debug/layout/color_preference.xml",
-        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/src/main/res/layout/color_preference.xml"
->>>>>>> 0ce0b28205c42341a89856524e80a3c5363e3821
-    },
-    {
-        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/build/intermediates/res/merged/debug/layout/choose_song.xml",
-        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/src/main/res/layout/choose_song.xml"
-    },
-    {
-        "merged": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/build/intermediates/res/merged/debug/layout/device_list.xml",
-        "source": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/layout/device_list.xml"
-    },
-    {
-        "merged": "/Users/clogic/Workspace/MidiSheetMusic/app/build/intermediates/res/merged/debug/layout/file_browser.xml",
-        "source": "/Users/clogic/Workspace/MidiSheetMusic/app/src/main/res/layout/file_browser.xml"
-    },
-    {
-        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/build/intermediates/res/merged/debug/layout/row_devices.xml",
-        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/src/main/res/layout/row_devices.xml"
-    },
-    {
-        "merged": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/build/intermediates/res/merged/debug/layout/device_detail.xml",
-        "source": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/layout/device_detail.xml"
-    },
-    {
-        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/build/intermediates/res/merged/debug/layout/main.xml",
-        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/src/main/res/layout/main.xml"
-    },
-    {
-        "merged": "/Users/clogic/Workspace/MidiSheetMusic/app/build/intermediates/res/merged/debug/layout/help.xml",
-        "source": "/Users/clogic/Workspace/MidiSheetMusic/app/src/main/res/layout/help.xml"
-    },
-    {
-        "merged": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/build/intermediates/res/merged/debug/layout/choose_song_item.xml",
-        "source": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/layout/choose_song_item.xml"
-    },
-    {
-        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/build/intermediates/res/merged/debug/layout/choose_song_item.xml",
-        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/src/main/res/layout/choose_song_item.xml"
-    },
-    {
-        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/build/intermediates/res/merged/debug/layout/file_browser.xml",
-        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/src/main/res/layout/file_browser.xml"
-    },
-    {
-        "merged": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/build/intermediates/res/merged/debug/layout/save_images_dialog.xml",
-        "source": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/layout/save_images_dialog.xml"
-    },
-    {
-        "merged": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/build/intermediates/res/merged/debug/layout/file_browser.xml",
-        "source": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/src/main/res/layout/file_browser.xml"
-    },
-    {
-        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/build/intermediates/res/merged/debug/layout/save_images_dialog.xml",
-        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/app/src/main/res/layout/save_images_dialog.xml"
-    },
-    {
-        "merged": "/Users/clogic/Workspace/MidiSheetMusic/app/build/intermediates/res/merged/debug/layout/color_preference.xml",
-        "source": "/Users/clogic/Workspace/MidiSheetMusic/app/src/main/res/layout/color_preference.xml"
     },
     {
         "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/build/intermediates/res/merged/debug/layout/help.xml",
