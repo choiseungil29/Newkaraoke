@@ -27,6 +27,7 @@ import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -52,7 +53,7 @@ import java.util.zip.CRC32;
 
 /**
  * @class SheetMusicActivity
- * <p>
+ * <p/>
  * The SheetMusicActivity is the main activity. The main components are:
  * - MidiPlayer : The buttons and speed bar at the top.
  * - Piano : For highlighting the piano notes during playback.
@@ -387,6 +388,9 @@ public class SheetMusicActivity extends Activity {
         super.onResume();
         if (camera == null) {
             camera = Camera.open(findBackFacingCamera());
+//            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.JELLY_BEAN_MR1) {
+//                camera.enableShutterSound(false);
+//            }
             preview.refreshCamera(camera);
         }
         layout.requestLayout();

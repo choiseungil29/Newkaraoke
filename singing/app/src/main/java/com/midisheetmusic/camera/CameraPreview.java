@@ -27,11 +27,9 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
         // deprecated setting, but required on Android versions prior to 3.0
         mHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
 
-        AudioManager mgr = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
-        mgr.setStreamMute(AudioManager.STREAM_SYSTEM, true);
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.JELLY_BEAN_MR1) {
-            camera.enableShutterSound(false);
-        }
+//        AudioManager mgr = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
+//        mgr.setStreamMute(AudioManager.STREAM_SYSTEM, true);
+
     }
 
     private final Camera.ShutterCallback shutterCallback = new Camera.ShutterCallback() {
