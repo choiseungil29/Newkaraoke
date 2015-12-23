@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/build/intermediates/res/merged/debug/color/common_signin_btn_text_dark.xml",
+        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/res/color/common_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/build/intermediates/res/merged/debug/color/common_signin_btn_text_light.xml",
+        "source": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/res/color/common_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/build/intermediates/res/merged/debug/color/common_signin_btn_text_dark.xml",
+        "source": "/Users/clogic/Workspace/MidiSheetMusic/singing/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/res/color/common_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/build/intermediates/res/merged/debug/color/common_signin_btn_text_light.xml",
+        "source": "/Users/1002230/Documents/workspace/out/vpang/Newkaraoke/singing/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/res/color/common_signin_btn_text_light.xml"
+    }
+]

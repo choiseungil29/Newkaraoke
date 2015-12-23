@@ -693,7 +693,6 @@ public class MidiPlayer extends LinearLayout {
         StopSound();
         if (activity.is_recording) {
             activity.stopRecord();
-            Log.d("kkk", "=============end???");
         }
     }
 
